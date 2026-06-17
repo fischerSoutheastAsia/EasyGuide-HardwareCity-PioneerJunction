@@ -14,11 +14,11 @@ window.ASSET_OMIKUJI_2 = "https://raw.githubusercontent.com/fischerSoutheastAsia
 <script>
 /* Assets for METAL Category — inlined from asset_metal.js */
 /* Assets for METAL Category */
-window.PRODUCT_METAL_IMG_IMG_PROD_FBN_1 = "";
-window.PRODUCT_METAL_IMG_IMG_PROD_FBN_2 = "";
-window.PRODUCT_METAL_IMG_IMG_PROD_FSL_1 = "";
-window.PRODUCT_METAL_IMG_IMG_PROD_FWA_1 = "";
-window.PRODUCT_METAL_IMG_IMG_PROD_FWA_2 = "";
+window.PRODUCT_METAL_IMG_IMG_PROD_FBN_1 = "https://raw.githubusercontent.com/fischerSoutheastAsia/easyguide-preview/main/image/PROD_METAL/IMG_PROD_FBN_1.webp";
+window.PRODUCT_METAL_IMG_IMG_PROD_FBN_2 = "https://raw.githubusercontent.com/fischerSoutheastAsia/easyguide-preview/main/image/PROD_METAL/IMG_PROD_FBN_2.webp";
+window.PRODUCT_METAL_IMG_IMG_PROD_FSL_1 = "https://raw.githubusercontent.com/fischerSoutheastAsia/easyguide-preview/main/image/PROD_METAL/IMG_PROD_FSL_1.webp";
+window.PRODUCT_METAL_IMG_IMG_PROD_FWA_1 = "https://raw.githubusercontent.com/fischerSoutheastAsia/easyguide-preview/main/image/PROD_METAL/IMG_PROD_FWA_1.webp";
+window.PRODUCT_METAL_IMG_IMG_PROD_FWA_2 = "https://raw.githubusercontent.com/fischerSoutheastAsia/easyguide-preview/main/image/PROD_METAL/IMG_PROD_FWA_2.webp";
 </script>
 
 <script>
@@ -53,6 +53,11 @@ window.ICON_PROD_IMG_ICON_PROD_HYBRIDPOWER = "https://raw.githubusercontent.com/
 
 </script>
 <script>
+/* Assets for ICON_COMPARE */
+window.ICON_COMPARE_IMG_ICON_COMPARE_SCALE = "https://raw.githubusercontent.com/fischerSoutheastAsia/easyguide-preview/main/image/ICON_COMPARE/%E2%80%94Pngtree%E2%80%94vector%20scale%20icon_4184758.png";
+window.ICON_COMPARE_IMG_ICON_COMPARE_EMPTY = "https://raw.githubusercontent.com/fischerSoutheastAsia/easyguide-preview/main/image/ICON_COMPARE/%E2%80%94Pngtree%E2%80%94vector%20scale%20icon_4184758.png";
+</script>
+<script>
 /* Assets for MASCOT_L */
 window.MASCOT_L_IMG_IMG_MASCOT_L_GREETING = "https://raw.githubusercontent.com/fischerSoutheastAsia/easyguide-preview/main/image/MASCOT_L/IMG_MASCOT_L_GREETING.webp";
 window.MASCOT_L_IMG_IMG_MASCOT_L_SHOCK = "https://raw.githubusercontent.com/fischerSoutheastAsia/easyguide-preview/main/image/MASCOT_L/IMG_MASCOT_L_SHOCK.webp";
@@ -64,6 +69,22 @@ window.MASCOT_L_IMG_IMG_MASCOT_L_SHOCK = "https://raw.githubusercontent.com/fisc
 *{box-sizing:border-box;margin:0;padding:0}
 body{background:#BDBAB0;display:flex;justify-content:center;align-items:flex-start;min-height:100vh;padding:24px 0;font-family:'Inter',sans-serif;}
 :root{--R:#FF0000;--BG:#F6F4F3;--W:#fff;--BD:#DDD9D4;--T:#1a1a1a;--MU:#6b6b6b;--G1:#BDBAB0;--G2:#DDD9D4;--G3:#E4E3DF;--G4:#F6F4F3;}
+
+/* ── Landscape fullscreen on mobile ── */
+@media (orientation: landscape) and (max-height: 600px) {
+  body {
+    background: #fff;
+    padding: 0;
+    align-items: stretch;
+    min-height: 100dvh;
+  }
+  .app {
+    width: 100vw !important;
+    min-height: 100dvh !important;
+    max-width: none !important;
+    border-radius: 0 !important;
+  }
+}
 .lang-zh *{font-family:'Noto Sans SC',sans-serif !important;font-weight:500;}
 .lang-zh #eg-title{font-family:'Montserrat',sans-serif !important;font-weight:800 !important;}
 .block-btn{background:#F6F4F3;border:none;width:100%;height:114px;cursor:pointer;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:9px;transition:background 0.15s ease;position:relative;overflow:hidden;}
@@ -92,7 +113,7 @@ body{background:#BDBAB0;display:flex;justify-content:center;align-items:flex-sta
 #det-slider-box,#car-wrap,#car-track{width:100% !important;max-width:100% !important;}
 #car-track>div{flex:0 0 100% !important;width:100% !important;min-width:0 !important;}
 #car-track>div img{width:100% !important;aspect-ratio:780/439;object-fit:cover !important;display:block;}
-.slide-panel{position:absolute;top:0;left:0;right:0;bottom:0;display:flex;flex-direction:column;overflow-y:auto;overflow-x:hidden;padding-bottom:56px;transition:transform 0.32s cubic-bezier(0.4,0,0.2,1);will-change:transform;scrollbar-width:none;}
+.slide-panel{position:absolute;top:0;left:0;right:0;bottom:0;display:flex;flex-direction:column;overflow-y:auto;overflow-x:hidden;padding-bottom:64px;transition:transform 0.32s cubic-bezier(0.4,0,0.2,1);will-change:transform;scrollbar-width:none;}
 .slide-panel::-webkit-scrollbar{display:none;}
 .slide-panel.pos-left{transform:translateX(-100%);}
 .slide-panel.pos-center{transform:translateX(0);}
@@ -121,7 +142,17 @@ window.OMIKUJI_RESULT_IMG_IMG_OMIKUJI_RESULT_POWER = "https://raw.githubusercont
 window.OMIKUJI_RESULT_IMG_IMG_OMIKUJI_RESULT_YES = "https://raw.githubusercontent.com/fischerSoutheastAsia/easyguide-preview/main/image/OMIKUJI_RESULT/IMG_OMIKUJI_RESULT_YES.webp";
 
 </script>
-<script src="PROD_CHEMICAL.js"></script>
+<script>
+window.PRODUCT_CHEMICAL_IMG_IMG_PROD_FIS_EM_1   = "https://raw.githubusercontent.com/fischerSoutheastAsia/easyguide-preview/main/image/PROD_CHEMICAL/IMG_PROD_FIS_EM_1.webp";
+window.PRODUCT_CHEMICAL_IMG_IMG_PROD_FIS_EM_2   = "https://raw.githubusercontent.com/fischerSoutheastAsia/easyguide-preview/main/image/PROD_CHEMICAL/IMG_PROD_FIS_EM_2.webp";
+window.PRODUCT_CHEMICAL_IMG_IMG_PROD_FIS_VS_1   = "https://raw.githubusercontent.com/fischerSoutheastAsia/easyguide-preview/main/image/PROD_CHEMICAL/IMG_PROD_FIS_VS_1.webp";
+window.PRODUCT_CHEMICAL_IMG_IMG_PROD_FIS_VS_2   = "https://raw.githubusercontent.com/fischerSoutheastAsia/easyguide-preview/main/image/PROD_CHEMICAL/IMG_PROD_FIS_VS_1.webp";
+window.PRODUCT_CHEMICAL_IMG_IMG_PROD_FIS_P_1    = "https://raw.githubusercontent.com/fischerSoutheastAsia/easyguide-preview/main/image/PROD_CHEMICAL/IMG_PROD_FIS_P_1.webp";
+window.PRODUCT_CHEMICAL_IMG_IMG_PROD_FIS_DMS_1  = "https://raw.githubusercontent.com/fischerSoutheastAsia/easyguide-preview/main/image/PROD_CHEMICAL_ACCESORY/IMG_PROD_FIS_DMS_1.webp";
+window.PRODUCT_CHEMICAL_IMG_IMG_PROD_FIS_DMS_2  = "https://raw.githubusercontent.com/fischerSoutheastAsia/easyguide-preview/main/image/PROD_CHEMICAL_ACCESORY/IMG_PROD_FIS_DMS_2.webp";
+window.PRODUCT_CHEMICAL_IMG_IMG_PROD_FIS_AM_1   = "https://raw.githubusercontent.com/fischerSoutheastAsia/easyguide-preview/main/image/PROD_CHEMICAL_ACCESORY/IMG_PROD_FIS_AM_1.webp";
+window.PRODUCT_CHEMICAL_IMG_IMG_PROD_FIS_MR_1   = "https://raw.githubusercontent.com/fischerSoutheastAsia/easyguide-preview/main/image/PROD_CHEMICAL_ACCESORY/IMG_PROD_FIS_MR_1.webp";
+</script>
 </head>
 <body>
 <div class="app" id="APP" style="font-family:'Inter',sans-serif;background:#fff;width:390px;min-height:720px;display:flex;flex-direction:column;overflow:hidden;position:relative;">
@@ -299,11 +330,11 @@ window.OMIKUJI_RESULT_IMG_IMG_OMIKUJI_RESULT_YES = "https://raw.githubuserconten
     </div>
     <div style="padding:0 0 20px;display:flex;flex-direction:column;">
       <button class="app-row" onclick="fA('ETA')">
-        <div style="flex:1;text-align:left;"><div style="font-size:15px;font-weight:300;color:#1a1a1a;" id="app-lbl-eta"></div></div>
+        <div style="flex:1;text-align:left;"><div style="font-size:15px;font-weight:300;color:#1a1a1a;" id="app-lbl-eta">ETA Approved</div></div>
         <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="#ccc" stroke-width="2.5" stroke-linecap="square" stroke-linejoin="miter" style="flex-shrink:0;margin-left:12px;"><path d="M9 18l6-6-6-6"/></svg>
       </button>
       <button class="app-row" onclick="fA('Fire')">
-        <div style="flex:1;text-align:left;"><div style="font-size:15px;font-weight:300;color:#1a1a1a;" id="app-lbl-fire"></div></div>
+        <div style="flex:1;text-align:left;"><div style="font-size:15px;font-weight:300;color:#1a1a1a;" id="app-lbl-fire">Fire resistance</div></div>
         <div style="display:flex;flex-direction:row;gap:4px;flex-shrink:0;align-items:center;">
           <div style="background:#FF0000;color:#fff;font-size:11px;font-weight:700;padding:0 7px;line-height:20px;height:20px;white-space:nowrap;">R120</div>
           <div style="background:#FF0000;color:#fff;font-size:11px;font-weight:700;padding:0 7px;line-height:20px;height:20px;white-space:nowrap;">R240</div>
@@ -311,7 +342,7 @@ window.OMIKUJI_RESULT_IMG_IMG_OMIKUJI_RESULT_YES = "https://raw.githubuserconten
         <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="#ccc" stroke-width="2.5" stroke-linecap="square" stroke-linejoin="miter" style="flex-shrink:0;margin-left:12px;"><path d="M9 18l6-6-6-6"/></svg>
       </button>
       <button class="app-row" onclick="fA('Life')">
-        <div style="flex:1;text-align:left;"><div style="font-size:15px;font-weight:300;color:#1a1a1a;" id="app-lbl-life"></div></div>
+        <div style="flex:1;text-align:left;"><div style="font-size:15px;font-weight:300;color:#1a1a1a;" id="app-lbl-life">Service life</div></div>
         <div style="display:flex;flex-direction:row;gap:4px;flex-shrink:0;align-items:center;">
           <div style="background:#FF0000;color:#fff;font-size:11px;font-weight:700;padding:0 7px;line-height:20px;height:20px;white-space:nowrap;">100 yrs</div>
           <div style="background:#FF0000;color:#fff;font-size:11px;font-weight:700;padding:0 7px;line-height:20px;height:20px;white-space:nowrap;">120 yrs</div>
@@ -319,7 +350,7 @@ window.OMIKUJI_RESULT_IMG_IMG_OMIKUJI_RESULT_YES = "https://raw.githubuserconten
         <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="#ccc" stroke-width="2.5" stroke-linecap="square" stroke-linejoin="miter" style="flex-shrink:0;margin-left:12px;"><path d="M9 18l6-6-6-6"/></svg>
       </button>
       <button class="app-row" onclick="fA('Seismic')">
-        <div style="flex:1;text-align:left;"><div style="font-size:15px;font-weight:300;color:#1a1a1a;" id="app-lbl-seis"></div></div>
+        <div style="flex:1;text-align:left;"><div style="font-size:15px;font-weight:300;color:#1a1a1a;" id="app-lbl-seis">Seismic C2</div></div>
         <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="#ccc" stroke-width="2.5" stroke-linecap="square" stroke-linejoin="miter" style="flex-shrink:0;margin-left:12px;"><path d="M9 18l6-6-6-6"/></svg>
       </button>
     </div>
@@ -356,6 +387,17 @@ window.OMIKUJI_RESULT_IMG_IMG_OMIKUJI_RESULT_YES = "https://raw.githubuserconten
         <div style="font-size:15px;color:#aaa;">Tap ☆ on any product to save it.</div>
       </div>
     </div>
+  </div>
+
+  <!-- COMPARE PANEL -->
+  <div class="slide-panel pos-right" id="panel-cmp">
+    <div id="cmp-top" style="padding:16px 16px 8px;background:#fff;">
+      <div style="display:flex;align-items:center;gap:12px;padding:8px 0 16px;">
+        <div style="width:50px;height:80px;flex-shrink:0;display:flex;align-items:center;justify-content:center;" class="mascot-anim"><img src="https://raw.githubusercontent.com/fischerSoutheastAsia/easyguide-preview/main/image/MASCOT_S/IMG_MASCOT_S_WORKOUT.webp" style="width:50px;height:80px;object-fit:contain;"></div>
+        <div style="font-family:'Varela Round',sans-serif;font-size:13px;color:#1a1a1a;line-height:1.55;" class="speech-anim">Select up to <span style="color:#FF0000;font-weight:700;">3 products</span> to compare specs side by side.</div>
+      </div>
+    </div>
+    <div id="cmp-c" style="padding:0 0 20px;display:flex;flex-direction:column;"></div>
   </div>
 
   <!-- SOC PANEL -->
@@ -433,52 +475,218 @@ window.OMIKUJI_RESULT_IMG_IMG_OMIKUJI_RESULT_YES = "https://raw.githubuserconten
 </div><!-- end slide-container -->
 
 <!-- NAV -->
-<div style="position:absolute;bottom:0;left:0;right:0;background:#fff;display:flex;height:56px;z-index:100;border-top:1px solid #E4E3DF;">
-  <button id="ni-pr" onclick="nC('pr')" style="display:flex;flex-direction:column;align-items:center;justify-content:center;gap:3px;cursor:pointer;flex:1;background:none;border:none;position:relative;">
-    <svg id="ni-pr-svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#FF0000" stroke-width="2.5" stroke-linecap="square" stroke-linejoin="miter"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/></svg>
-    <span class="nav-label" style="color:#FF0000;" id="nav-pr">Products</span>
-  </button>
-  <button id="ni-fav" onclick="nC('fav')" style="display:flex;flex-direction:column;align-items:center;justify-content:center;gap:3px;cursor:pointer;flex:1;background:none;border:none;position:relative;">
-    <div style="position:relative;display:inline-block;">
-      <svg id="ni-fav-svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#ccc" stroke-width="2.5" stroke-linecap="square" stroke-linejoin="miter"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-      <span id="fav-badge" style="display:none;position:absolute;top:-5px;right:-9px;background:#FF0000;color:#fff;border-radius:50%;width:16px;height:16px;font-size:9px;font-weight:700;align-items:center;justify-content:center;line-height:16px;text-align:center;border:1px solid #fff;">0</span>
-    </div>
-    <span class="nav-label" style="color:#ccc;" id="nav-fav">Favorites</span>
-  </button>
-  <button id="ni-soc" onclick="nC('soc')" style="display:flex;flex-direction:column;align-items:center;justify-content:center;gap:3px;cursor:pointer;flex:1;background:none;border:none;">
-    <svg id="ni-soc-svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#ccc" stroke-width="2.5" stroke-linecap="square" stroke-linejoin="miter">
-      <rect x="17" y="2" width="4" height="4" rx="0"/>
-      <rect x="17" y="17" width="4" height="4" rx="0"/>
-      <rect x="3" y="9.5" width="4" height="4" rx="0"/>
-      <line x1="7" y1="11.5" x2="17" y2="4"/>
-      <line x1="7" y1="11.5" x2="17" y2="19"/>
-    </svg>
-    <span class="nav-label" style="color:#ccc;" id="nav-soc">Social</span>
-  </button>
-  <button id="ni-fortune" onclick="nC('fortune')" style="display:flex;flex-direction:column;align-items:center;justify-content:center;gap:3px;cursor:pointer;flex:1;background:none;border:none;">
-    <svg id="ni-fortune-svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#ccc" stroke-width="2.5" stroke-linecap="square" stroke-linejoin="miter">
-      <path d="M8 8a4 4 0 0 1 8 0c0 2.5-4 3.5-4 6"/>
-      <line x1="12" y1="18" x2="12" y2="18.5"/>
-    </svg>
-    <span class="nav-label" style="color:#ccc;" id="nav-fortune">Fortune</span>
-  </button>
+<style>
+/* ── Bump Nav ── */
+#nav-bar{position:absolute;bottom:0;left:0;right:0;z-index:100;height:64px;pointer-events:none;}
+#nav-bar svg.nav-bg{position:absolute;bottom:0;left:0;width:100%;height:64px;display:block;}
+#nav-btns{position:absolute;bottom:0;left:0;right:0;height:64px;display:flex;pointer-events:all;}
+.ni{display:flex;flex-direction:column;align-items:center;justify-content:flex-end;padding-bottom:10px;gap:2px;cursor:pointer;flex:1;background:none;border:none;position:relative;transition:none;}
+.ni-icon-wrap{display:flex;align-items:center;justify-content:center;}
+.ni svg,.ni img{transition:none;display:block;}
+</style>
+<div id="nav-bar">
+  <svg class="nav-bg" id="nav-bg-svg" viewBox="0 0 390 64" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+    <path id="nav-bg-path" d="M0,8 L0,64 L390,64 L390,8 L0,8 Z" fill="#fff"/>
+    <path id="nav-border-path" d="M0,8 L390,8" fill="none" stroke="#E4E3DF" stroke-width="1"/>
+  </svg>
+  <div id="nav-btns">
+    <!-- Products -->
+    <button class="ni" id="ni-pr" onclick="nC('pr')">
+      <div class="ni-icon-wrap" id="ni-pr-wrap">
+        <svg id="ni-pr-svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#FF0000" stroke-width="2.5" stroke-linecap="square" stroke-linejoin="miter"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/></svg>
+      </div>
+      <span class="nav-label" style="color:#FF0000;" id="nav-pr">Products</span>
+    </button>
+    <!-- Favorites -->
+    <button class="ni" id="ni-fav" onclick="nC('fav')">
+      <div class="ni-icon-wrap" id="ni-fav-wrap">
+        <div style="position:relative;display:inline-flex;">
+          <svg id="ni-fav-svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#ccc" stroke-width="2.5" stroke-linecap="square" stroke-linejoin="miter"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          <span id="fav-badge" style="display:none;position:absolute;top:-5px;right:-9px;background:#FF0000;color:#fff;border-radius:50%;width:16px;height:16px;font-size:9px;font-weight:700;align-items:center;justify-content:center;line-height:16px;text-align:center;border:1px solid #fff;">0</span>
+        </div>
+      </div>
+      <span class="nav-label" style="color:#ccc;" id="nav-fav">Favorites</span>
+    </button>
+    <!-- Compare -->
+    <button class="ni" id="ni-cmp" onclick="nC('cmp')">
+      <div class="ni-icon-wrap" id="ni-cmp-wrap">
+        <div style="position:relative;display:inline-flex;">
+          <img id="ni-cmp-img" src="" width="22" height="22" style="object-fit:contain;display:block;opacity:0.35;filter:grayscale(1);" alt="Compare">
+          <span id="cmp-badge" style="display:none;position:absolute;top:-5px;right:-9px;background:#FF0000;color:#fff;border-radius:50%;width:16px;height:16px;font-size:9px;font-weight:700;align-items:center;justify-content:center;line-height:16px;text-align:center;border:1px solid #fff;">0</span>
+        </div>
+      </div>
+      <span class="nav-label" style="color:#ccc;" id="nav-cmp">Compare</span>
+    </button>
+    <!-- Social -->
+    <button class="ni" id="ni-soc" onclick="nC('soc')">
+      <div class="ni-icon-wrap" id="ni-soc-wrap">
+        <svg id="ni-soc-svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#ccc" stroke-width="2.5" stroke-linecap="square" stroke-linejoin="miter">
+          <rect x="17" y="2" width="4" height="4" rx="0"/><rect x="17" y="17" width="4" height="4" rx="0"/>
+          <rect x="3" y="9.5" width="4" height="4" rx="0"/>
+          <line x1="7" y1="11.5" x2="17" y2="4"/><line x1="7" y1="11.5" x2="17" y2="19"/>
+        </svg>
+      </div>
+      <span class="nav-label" style="color:#ccc;" id="nav-soc">Social</span>
+    </button>
+    <!-- Fortune -->
+    <button class="ni" id="ni-fortune" onclick="nC('fortune')">
+      <div class="ni-icon-wrap" id="ni-fortune-wrap">
+        <svg id="ni-fortune-svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#ccc" stroke-width="2.5" stroke-linecap="square" stroke-linejoin="miter">
+          <path d="M8 8a4 4 0 0 1 8 0c0 2.5-4 3.5-4 6"/><line x1="12" y1="18" x2="12" y2="18.5"/>
+        </svg>
+      </div>
+      <span class="nav-label" style="color:#ccc;" id="nav-fortune">Fortune</span>
+    </button>
+  </div>
 </div>
+
+<script>
+// ── Bump Nav animation ──
+const NAV_TABS=['pr','fav','cmp','soc','fortune'];
+const NAV_COUNT=NAV_TABS.length;
+const NAV_W=390;
+let _activeNavTab='pr';
+
+function getNavW(){
+  const navBar=document.getElementById('nav-bar');
+  return navBar ? navBar.offsetWidth : NAV_W;
+}
+
+function getBumpPath(activeIdx){
+  const W=getNavW();
+  const tw=W/NAV_COUNT;
+  const cx=tw*activeIdx+tw/2;
+  const bumpW=tw*1.6;
+  const bumpH=14;
+  const topY=8;
+  const l1=cx-bumpW*0.55, l2=cx-bumpW*0.22;
+  const r1=cx+bumpW*0.22, r2=cx+bumpW*0.55;
+  return `M0,${topY} L${l1},${topY} C${l2},${topY} ${cx-bumpW*0.12},${topY-bumpH} ${cx},${topY-bumpH} C${cx+bumpW*0.12},${topY-bumpH} ${r1},${topY} ${r2},${topY} L${W},${topY} L${W},64 L0,64 Z`;
+}
+function getBorderPath(activeIdx){
+  const W=getNavW();
+  const tw=W/NAV_COUNT;
+  const cx=tw*activeIdx+tw/2;
+  const bumpW=tw*1.6;
+  const bumpH=14;
+  const topY=8;
+  const l1=cx-bumpW*0.55, l2=cx-bumpW*0.22;
+  const r1=cx+bumpW*0.22, r2=cx+bumpW*0.55;
+  return `M0,${topY} L${l1},${topY} C${l2},${topY} ${cx-bumpW*0.12},${topY-bumpH} ${cx},${topY-bumpH} C${cx+bumpW*0.12},${topY-bumpH} ${r1},${topY} ${r2},${topY} L${W},${topY}`;
+}
+
+// Smooth path morphing via requestAnimationFrame
+let _morphRaf=null,_morphFrom=null,_morphTo=null,_morphT=0;
+function parsePath(d){
+  // extract all numbers for interpolation
+  return d.match(/-?[\d.]+/g).map(Number);
+}
+function buildPath(template,nums){
+  let i=0;
+  return template.replace(/-?[\d.]+/g,()=>nums[i++].toFixed(2));
+}
+function morphPath(fromPath,toPath,dur,onUpdate,onDone){
+  if(_morphRaf)cancelAnimationFrame(_morphRaf);
+  const fromNums=parsePath(fromPath);
+  const toNums=parsePath(toPath);
+  const start=performance.now();
+  function step(now){
+    const t=Math.min((now-start)/dur,1);
+    // ease in-out cubic
+    const e=t<0.5?4*t*t*t:(t-1)*(2*t-2)*(2*t-2)+1;
+    const interp=fromNums.map((f,i)=>f+(toNums[i]-f)*e);
+    onUpdate(buildPath(fromPath,interp));
+    if(t<1)_morphRaf=requestAnimationFrame(step);
+    else{onUpdate(toPath);if(onDone)onDone();}
+  }
+  _morphRaf=requestAnimationFrame(step);
+}
+
+function animateBumpTo(newIdx){
+  const bgPath=$('nav-bg-path');
+  const bdPath=$('nav-border-path');
+  if(!bgPath||!bdPath)return;
+  const fromBg=bgPath.getAttribute('d');
+  const fromBd=bdPath.getAttribute('d');
+  const toBg=getBumpPath(newIdx);
+  const toBd=getBorderPath(newIdx);
+  morphPath(fromBg,toBg,320,d=>bgPath.setAttribute('d',d));
+  morphPath(fromBd,toBd,320,d=>bdPath.setAttribute('d',d));
+}
+
+function setNavActive(tab){
+  const newIdx=NAV_TABS.indexOf(tab);
+  const oldIdx=NAV_TABS.indexOf(_activeNavTab);
+
+  // animate SVG bump
+  if(newIdx!==oldIdx) animateBumpTo(newIdx);
+  _activeNavTab=tab;
+
+  NAV_TABS.forEach((x,i)=>{
+    const wrap=$('ni-'+x+'-wrap');
+    const lbl=$('nav-'+x);
+    const isActive=x===tab;
+    const c=isActive?'#FF0000':'#ccc';
+
+    // icon wrap bump animation
+    if(wrap){
+      wrap.classList.remove('anim-in','anim-out','bumped');
+      void wrap.offsetWidth;
+    }
+
+    if(lbl)lbl.style.color=c;
+
+    // color the icon
+    if(x==='cmp'){
+      const img=$('ni-cmp-img');
+      if(img){
+        img.style.opacity=isActive?'1':'0.35';
+        img.style.filter=isActive?'invert(18%) sepia(100%) saturate(7000%) hue-rotate(0deg) brightness(100%) contrast(100%)':'grayscale(1)';
+      }
+    } else {
+      const svgEl=$(x==='pr'?'ni-pr-svg':x==='fav'?'ni-fav-svg':x==='soc'?'ni-soc-svg':'ni-fortune-svg');
+      if(svgEl)svgEl.setAttribute('stroke',c);
+    }
+  });
+}
+
+// Init bump at Products (index 0)
+(function(){
+  const bgPath=$('nav-bg-path');
+  const bdPath=$('nav-border-path');
+  if(bgPath)bgPath.setAttribute('d',getBumpPath(0));
+  if(bdPath)bdPath.setAttribute('d',getBorderPath(0));
+})();
+
+// Redraw nav SVG on orientation change / resize
+window.addEventListener('resize', function(){
+  const bgPath=$('nav-bg-path');
+  const bdPath=$('nav-border-path');
+  const idx=NAV_TABS.indexOf(_activeNavTab);
+  if(bgPath)bgPath.setAttribute('d',getBumpPath(idx));
+  if(bdPath)bdPath.setAttribute('d',getBorderPath(idx));
+  // also update nav SVG viewBox
+  const svg=document.getElementById('nav-bg-svg');
+  const W=getNavW();
+  if(svg)svg.setAttribute('viewBox','0 0 '+W+' 64');
+});
+</script>
 
 </div>
 
 <script>
 /* Assets for PRODUCT_PLASTIC */
-window.PRODUCT_PLASTIC_IMG_IMG_PROD_DUOBLADE_1 = "";
-window.PRODUCT_PLASTIC_IMG_IMG_PROD_DUOBLADE_2 = "";
-window.PRODUCT_PLASTIC_IMG_IMG_PROD_DUOBLADE_3 = "";
-window.PRODUCT_PLASTIC_IMG_IMG_PROD_DUOPOWER_1 = "";
-window.PRODUCT_PLASTIC_IMG_IMG_PROD_DUOPOWER_2 = "";
-window.PRODUCT_PLASTIC_IMG_IMG_PROD_DUOPOWER_3 = "";
-window.PRODUCT_PLASTIC_IMG_IMG_PROD_DUOPOWER_4 = "";
-window.PRODUCT_PLASTIC_IMG_IMG_PROD_DUOPOWER_5 = "";
-window.PRODUCT_PLASTIC_IMG_IMG_PROD_HYBRIDPOWER_1 = "";
-window.PRODUCT_PLASTIC_IMG_IMG_PROD_HYBRIDPOWER_2 = "";
-window.PRODUCT_PLASTIC_IMG_IMG_PROD_HYBRIDPOWER_3 = "";
+window.PRODUCT_PLASTIC_IMG_IMG_PROD_DUOBLADE_1 = "https://raw.githubusercontent.com/fischerSoutheastAsia/easyguide-preview/main/image/PROD_PLASTIC/IMG_PROD_DuoBlade_1.webp";
+window.PRODUCT_PLASTIC_IMG_IMG_PROD_DUOBLADE_2 = "https://raw.githubusercontent.com/fischerSoutheastAsia/easyguide-preview/main/image/PROD_PLASTIC/IMG_PROD_DuoBlade_2.webp";
+window.PRODUCT_PLASTIC_IMG_IMG_PROD_DUOBLADE_3 = "https://raw.githubusercontent.com/fischerSoutheastAsia/easyguide-preview/main/image/PROD_PLASTIC/IMG_PROD_DuoBlade_3.webp";
+window.PRODUCT_PLASTIC_IMG_IMG_PROD_DUOPOWER_1 = "https://raw.githubusercontent.com/fischerSoutheastAsia/easyguide-preview/main/image/PROD_PLASTIC/IMG_PROD_DuoPower_1.webp";
+window.PRODUCT_PLASTIC_IMG_IMG_PROD_DUOPOWER_2 = "https://raw.githubusercontent.com/fischerSoutheastAsia/easyguide-preview/main/image/PROD_PLASTIC/IMG_PROD_DuoPower_2.webp";
+window.PRODUCT_PLASTIC_IMG_IMG_PROD_DUOPOWER_3 = "https://raw.githubusercontent.com/fischerSoutheastAsia/easyguide-preview/main/image/PROD_PLASTIC/IMG_PROD_DuoPower_3.webp";
+window.PRODUCT_PLASTIC_IMG_IMG_PROD_DUOPOWER_4 = "https://raw.githubusercontent.com/fischerSoutheastAsia/easyguide-preview/main/image/PROD_PLASTIC/IMG_PROD_DuoPower_4.webp";
+window.PRODUCT_PLASTIC_IMG_IMG_PROD_DUOPOWER_5 = "https://raw.githubusercontent.com/fischerSoutheastAsia/easyguide-preview/main/image/PROD_PLASTIC/IMG_PROD_DuoPower_5.webp";
+window.PRODUCT_PLASTIC_IMG_IMG_PROD_HYBRIDPOWER_1 = "https://raw.githubusercontent.com/fischerSoutheastAsia/easyguide-preview/main/image/PROD_PLASTIC/IMG_PROD_HybridPower_1.webp";
+window.PRODUCT_PLASTIC_IMG_IMG_PROD_HYBRIDPOWER_2 = "https://raw.githubusercontent.com/fischerSoutheastAsia/easyguide-preview/main/image/PROD_PLASTIC/IMG_PROD_HybridPower_2.webp";
+window.PRODUCT_PLASTIC_IMG_IMG_PROD_HYBRIDPOWER_3 = "https://raw.githubusercontent.com/fischerSoutheastAsia/easyguide-preview/main/image/PROD_PLASTIC/IMG_PROD_HybridPower_3.webp";
 
 function getProductImage(filename){
   const name = filename.replace(/\.png$/i,'').toLowerCase();
@@ -547,19 +755,19 @@ function getProductIcon(name){
 
 // ── PRODUCT DATA (updated from Product_finder_data.txt) ──
 const PD=[
-  {name:"DuoPower",tag:"All-rounder",cat:"Plastic fixing",type:"",mats:["Non-cracked concrete","Plasterboard","Hollow block","ALC","Solid brick"],ETA:0,life:0,fire:0,seis:0,fR:"",lY:"",wk:"",cu:"",features:["Stop guessing your wall type — it works in any wall.","Strong fit in every base material in 3-way smart function."],imgs:["prod-duopower-1.png","prod-duopower-2.png","prod-duopower-3.png","prod-duopower-4.png","prod-duopower-5.png"],loadUrl:"https://fiproductmedia.azureedge.net/media/Load%20Tables/Load%20Tables%20fischer/LT_DUOPOWER_EN_T1.pdf",vidUrl:"https://www.youtube.com/watch?v=J3Hk2pJOpV4",vidThumb:"https://img.youtube.com/vi/J3Hk2pJOpV4/hqdefault.jpg",webUrl:"https://www.fischer.sg/en-sg/products/standard-fixings/plastic-fixings/duopower",accessories:null},
-  {name:"HybridPower",tag:"New",cat:"Plastic fixing",type:"",mats:["Non-cracked concrete","Hollow block","ALC","Solid brick"],ETA:0,life:0,fire:0,seis:0,fR:"",lY:"",wk:"",cu:"",features:["Hybrid 2-Component Technology (Metal & Plastic) for maximum safety.","Metal-anchor load capacity with the installation ease of a plastic plug."],imgs:["prod-hybrid-1.png","prod-hybrid-2.png","prod-hybrid-3.png"],loadUrl:"https://fiproductmedia.azureedge.net/media/Load%20Tables/Load%20Tables%20fischer/LT_HYBRIDPOWER_EN_T1.pdf",vidUrl:"https://www.youtube.com/watch?v=VJZQIrfjTYA",vidThumb:"https://img.youtube.com/vi/VJZQIrfjTYA/hqdefault.jpg",webUrl:"https://www.fischer-international.com/en/products/standard-fixings/plastic-fixings/hybridpower",accessories:null},
-  {name:"DuoBlade",tag:"Fast & Easy",cat:"Plastic fixing",type:"",mats:["Plasterboard"],ETA:0,life:0,fire:0,seis:0,fR:"",lY:"",wk:"",cu:"",features:["Self-drilling: Fast & easy installation in Drywall.","Zero power tools: Only a manual screwdriver required."],imgs:["prod-duoblade-1.png","prod-duoblade-2.png","prod-duoblade-3.png"],loadUrl:"https://fiproductmedia.azureedge.net/media/Load%20Tables/Load%20Tables%20fischer/LT_DUOBLADE_EN_T1.pdf",vidUrl:"https://www.youtube.com/watch?v=llhfpNn8Ueo",vidThumb:"https://img.youtube.com/vi/llhfpNn8Ueo/hqdefault.jpg",webUrl:"https://www.fischer.sg/en-sg/products/cavity-fixings/board-fixing/plasterboard-fixing-duoblade",accessories:null},
-  {name:"FIS EM Plus 390 S",tag:"",cat:"Chemical fixing",type:"Epoxy mortar",mats:["Non-cracked concrete","Cracked concrete"],ETA:1,life:1,fire:1,seis:1,fR:"R240",lY:"120 years",wk:"7 mins",cu:"5 hours",features:["Critical Infrastructure & Heavy Duty.","Extreme Conditions & Water-Filled Holes.","Seismic & High-Safety Applications.","2 x Static mixer FIS MR Plus included."],imgs:["prod-fisem-1.png","prod-fisem-2.png"],loadUrl:null,vidUrl:"https://www.youtube.com/watch?v=2nieZGrHZ9w&t=8s",vidThumb:"https://img.youtube.com/vi/2nieZGrHZ9w/hqdefault.jpg",webUrl:"https://www.fischer.sg/en-sg/products/chemical-fixings/injection-mortar/epoxy-mortar-fis-em-plus",accessories:["FIS DMS Pro","FIS AM","FIS MR Plus"]},
-  {name:"FIS VS Plus 360 S",tag:"",cat:"Chemical fixing",type:"Vinyl ester",mats:["Non-cracked concrete","Cracked concrete","Hollow block","ALC","Solid brick"],ETA:1,life:1,fire:1,seis:1,fR:"R120",lY:"100 years",wk:"4 mins",cu:"30 mins",features:["Structural Steel & Timber Support.","Building Facades & Exterior Fixtures.","Safety Rails & Industrial Equipment.","2 x Static mixer FIS MR Plus included."],imgs:["prod-fisvs-1.png"],loadUrl:null,vidUrl:"https://www.youtube.com/watch?v=5wUj3OgOZAo",vidThumb:"https://img.youtube.com/vi/5wUj3OgOZAo/hqdefault.jpg",webUrl:"https://www.fischer-international.com/en/products/chemical-fixings/injection-mortar/injection-mortar-fis-v-plus/558749-fis-vs-plus-360-s",accessories:["FIS DMS Pro","FIS AM","FIS MR Plus"]},
-  {name:"FIS P Plus 300 T",tag:"",cat:"Chemical fixing",type:"Polyester",mats:["Non-cracked concrete","ALC","Solid brick"],ETA:1,life:0,fire:0,seis:0,fR:"",lY:"",wk:"2 mins",cu:"35 mins",features:["External Fixtures & Canopies.","Safety Rails & Balconies.","Gates & Security Gratings.","2 x Static mixer FIS MR Plus included."],imgs:["prod-fisp-1.png"],loadUrl:"https://fiproductmedia.azureedge.net/media/Load%20Tables/Load%20Tables%20fischer/LT_FIS-P-PLUS_EN_T1.pdf",vidUrl:null,vidThumb:null,webUrl:"https://www.fischer-international.com/en/products/chemical-fixings/injection-mortar/injection-mortar-fis-p-plus",accessories:["FIS DMS Pro","FIS AM","FIS MR Plus"]},
-  {name:"FBN II",tag:"",cat:"Steel fixing",type:"",mats:["Non-cracked concrete","Cracked concrete"],ETA:1,life:0,fire:0,seis:0,fR:"",lY:"",wk:"",cu:"",features:[],imgs:["prod-fbn-1.png","prod-fbn-2.png"],loadUrl:"https://fiproductmedia.azureedge.net/media/Load%20Tables/Load%20Tables%20fischer/LT_FBN-II_EN_T1.pdf",vidUrl:null,vidThumb:null,webUrl:"https://www.fischer.sg/en-sg/products/steel-fixings/bolt-anchor/bolt-anchor-fbn-ii/bolt-anchor-fbn-ii",accessories:null},
-  {name:"FSL",tag:"",cat:"Steel fixing",type:"",mats:["Non-cracked concrete"],ETA:0,life:0,fire:0,seis:0,fR:"",lY:"",wk:"",cu:"",features:[],imgs:["prod-fsl-1.png"],loadUrl:null,vidUrl:null,vidThumb:null,webUrl:"https://www.fischer-international.com/en/products/steel-fixings/sleeve-anchor/sleeve-anchor-fsl/sleeve-anchor-fsl",accessories:null},
-  {name:"FWA",tag:"",cat:"Steel fixing",type:"",mats:["Non-cracked concrete"],ETA:0,life:0,fire:0,seis:0,fR:"",lY:"",wk:"",cu:"",features:[],imgs:["prod-fwa-1.png","prod-fwa-2.png"],loadUrl:"https://fiproductmedia.azureedge.net/media/Load%20Tables/Load%20Tables%20fischer/LT_FWA_EN_T2.pdf",vidUrl:null,vidThumb:null,webUrl:"https://www.fischer.sg/en-sg/products/steel-fixings/bolt-anchor/bolt-anchor-fwa/bolt-anchor-fwa-metric",accessories:null},
+  {name:"DuoPower",tag:"All-rounder",cat:"Plastic fixing",type:"",mats:["Non-cracked concrete","Plasterboard","Hollow block","ALC","Solid brick"],ETA:0,life:0,fire:0,seis:0,fR:"",lY:"",wk:"",cu:"",features:["Stop guessing your wall type — it works in any wall.","Strong fit in every base material in 3-way smart function."],imgs:["https://raw.githubusercontent.com/fischerSoutheastAsia/easyguide-preview/main/image/PROD_PLASTIC/IMG_PROD_DuoPower_1.webp","https://raw.githubusercontent.com/fischerSoutheastAsia/easyguide-preview/main/image/PROD_PLASTIC/IMG_PROD_DuoPower_2.webp","https://raw.githubusercontent.com/fischerSoutheastAsia/easyguide-preview/main/image/PROD_PLASTIC/IMG_PROD_DuoPower_3.webp","https://raw.githubusercontent.com/fischerSoutheastAsia/easyguide-preview/main/image/PROD_PLASTIC/IMG_PROD_DuoPower_4.webp","https://raw.githubusercontent.com/fischerSoutheastAsia/easyguide-preview/main/image/PROD_PLASTIC/IMG_PROD_DuoPower_5.webp"],loadUrl:"https://fiproductmedia.azureedge.net/media/Load%20Tables/Load%20Tables%20fischer/LT_DUOPOWER_EN_T1.pdf",vidUrl:"https://www.youtube.com/watch?v=J3Hk2pJOpV4",vidThumb:"https://raw.githubusercontent.com/fischerSoutheastAsia/easyguide-preview/main/image/PROD_VIDEO_THUMB/IMG_PROD_DUOPOWER_THUMB.webp",webUrl:"https://www.fischer.sg/en-sg/products/standard-fixings/plastic-fixings/duopower",accessories:null},
+  {name:"HybridPower",tag:"New",cat:"Plastic fixing",type:"",mats:["Non-cracked concrete","Hollow block","ALC","Solid brick"],ETA:0,life:0,fire:0,seis:0,fR:"",lY:"",wk:"",cu:"",features:["Hybrid 2-Component Technology (Metal & Plastic) for maximum safety.","Metal-anchor load capacity with the installation ease of a plastic plug."],imgs:["https://raw.githubusercontent.com/fischerSoutheastAsia/easyguide-preview/main/image/PROD_PLASTIC/IMG_PROD_HybridPower_1.webp","https://raw.githubusercontent.com/fischerSoutheastAsia/easyguide-preview/main/image/PROD_PLASTIC/IMG_PROD_HybridPower_2.webp","https://raw.githubusercontent.com/fischerSoutheastAsia/easyguide-preview/main/image/PROD_PLASTIC/IMG_PROD_HybridPower_3.webp"],loadUrl:"https://fiproductmedia.azureedge.net/media/Load%20Tables/Load%20Tables%20fischer/LT_HYBRIDPOWER_EN_T1.pdf",vidUrl:"https://www.youtube.com/watch?v=VJZQIrfjTYA",vidThumb:"https://raw.githubusercontent.com/fischerSoutheastAsia/easyguide-preview/main/image/PROD_VIDEO_THUMB/IMG_PROD_HYBRIDPOWER_THUMB.webp",webUrl:"https://www.fischer-international.com/en/products/standard-fixings/plastic-fixings/hybridpower",accessories:null},
+  {name:"DuoBlade",tag:"Fast & Easy",cat:"Plastic fixing",type:"",mats:["Plasterboard"],ETA:0,life:0,fire:0,seis:0,fR:"",lY:"",wk:"",cu:"",features:["Self-drilling: Fast & easy installation in Drywall.","Zero power tools: Only a manual screwdriver required."],imgs:["https://raw.githubusercontent.com/fischerSoutheastAsia/easyguide-preview/main/image/PROD_PLASTIC/IMG_PROD_DuoBlade_1.webp","https://raw.githubusercontent.com/fischerSoutheastAsia/easyguide-preview/main/image/PROD_PLASTIC/IMG_PROD_DuoBlade_2.webp","https://raw.githubusercontent.com/fischerSoutheastAsia/easyguide-preview/main/image/PROD_PLASTIC/IMG_PROD_DuoBlade_3.webp"],loadUrl:"https://fiproductmedia.azureedge.net/media/Load%20Tables/Load%20Tables%20fischer/LT_DUOBLADE_EN_T1.pdf",vidUrl:"https://www.youtube.com/watch?v=llhfpNn8Ueo",vidThumb:"https://raw.githubusercontent.com/fischerSoutheastAsia/easyguide-preview/main/image/PROD_VIDEO_THUMB/IMG_PROD_DUOBLADE_THUMB.webp",webUrl:"https://www.fischer.sg/en-sg/products/cavity-fixings/board-fixing/plasterboard-fixing-duoblade",accessories:null},
+  {name:"FIS EM Plus 390 S",tag:"",cat:"Chemical fixing",type:"Epoxy mortar",mats:["Non-cracked concrete","Cracked concrete"],ETA:1,life:1,fire:1,seis:1,fR:"R240",lY:"120 years",wk:"7 mins",cu:"5 hours",features:["Critical Infrastructure & Heavy Duty.","Extreme Conditions & Water-Filled Holes.","Seismic & High-Safety Applications.","2 x Static mixer FIS MR Plus included."],imgs:["https://raw.githubusercontent.com/fischerSoutheastAsia/easyguide-preview/main/image/PROD_CHEMICAL/IMG_PROD_FIS_EM_1.webp","https://raw.githubusercontent.com/fischerSoutheastAsia/easyguide-preview/main/image/PROD_CHEMICAL/IMG_PROD_FIS_EM_2.webp"],loadUrl:null,vidUrl:"https://www.youtube.com/watch?v=2nieZGrHZ9w&t=8s",vidThumb:"https://raw.githubusercontent.com/fischerSoutheastAsia/easyguide-preview/main/image/PROD_VIDEO_THUMB/IMG_PROD_FISEM_THUMB.webp",webUrl:"https://www.fischer.sg/en-sg/products/chemical-fixings/injection-mortar/epoxy-mortar-fis-em-plus",accessories:["FIS DMS Pro","FIS AM","FIS MR Plus"]},
+  {name:"FIS VS Plus 360 S",tag:"",cat:"Chemical fixing",type:"Vinyl ester",mats:["Non-cracked concrete","Cracked concrete","Hollow block","ALC","Solid brick"],ETA:1,life:1,fire:1,seis:1,fR:"R120",lY:"100 years",wk:"4 mins",cu:"30 mins",features:["Structural Steel & Timber Support.","Building Facades & Exterior Fixtures.","Safety Rails & Industrial Equipment.","2 x Static mixer FIS MR Plus included."],imgs:["https://raw.githubusercontent.com/fischerSoutheastAsia/easyguide-preview/main/image/PROD_CHEMICAL/IMG_PROD_FIS_VS_1.webp"],loadUrl:null,vidUrl:"https://www.youtube.com/watch?v=5wUj3OgOZAo",vidThumb:"https://img.youtube.com/vi/5wUj3OgOZAo/hqdefault.jpg",webUrl:"https://www.fischer-international.com/en/products/chemical-fixings/injection-mortar/injection-mortar-fis-v-plus/558749-fis-vs-plus-360-s",accessories:["FIS DMS Pro","FIS AM","FIS MR Plus"]},
+  {name:"FIS P Plus 300 T",tag:"",cat:"Chemical fixing",type:"Polyester",mats:["Non-cracked concrete","ALC","Solid brick"],ETA:1,life:0,fire:0,seis:0,fR:"",lY:"",wk:"2 mins",cu:"35 mins",features:["External Fixtures & Canopies.","Safety Rails & Balconies.","Gates & Security Gratings.","2 x Static mixer FIS MR Plus included."],imgs:["https://raw.githubusercontent.com/fischerSoutheastAsia/easyguide-preview/main/image/PROD_CHEMICAL/IMG_PROD_FIS_P_1.webp"],loadUrl:"https://fiproductmedia.azureedge.net/media/Load%20Tables/Load%20Tables%20fischer/LT_FIS-P-PLUS_EN_T1.pdf",vidUrl:null,vidThumb:null,webUrl:"https://www.fischer-international.com/en/products/chemical-fixings/injection-mortar/injection-mortar-fis-p-plus",accessories:["FIS DMS Pro","FIS AM","FIS MR Plus"]},
+  {name:"FBN II",tag:"",cat:"Steel fixing",type:"",mats:["Non-cracked concrete","Cracked concrete"],ETA:1,life:0,fire:0,seis:0,fR:"",lY:"",wk:"",cu:"",features:[],imgs:["https://raw.githubusercontent.com/fischerSoutheastAsia/easyguide-preview/main/image/PROD_METAL/IMG_PROD_FBN_1.webp","https://raw.githubusercontent.com/fischerSoutheastAsia/easyguide-preview/main/image/PROD_METAL/IMG_PROD_FBN_2.webp"],loadUrl:"https://fiproductmedia.azureedge.net/media/Load%20Tables/Load%20Tables%20fischer/LT_FBN-II_EN_T1.pdf",vidUrl:null,vidThumb:null,webUrl:"https://www.fischer.sg/en-sg/products/steel-fixings/bolt-anchor/bolt-anchor-fbn-ii/bolt-anchor-fbn-ii",accessories:null},
+  {name:"FSL",tag:"",cat:"Steel fixing",type:"",mats:["Non-cracked concrete"],ETA:0,life:0,fire:0,seis:0,fR:"",lY:"",wk:"",cu:"",features:[],imgs:["https://raw.githubusercontent.com/fischerSoutheastAsia/easyguide-preview/main/image/PROD_METAL/IMG_PROD_FSL_1.webp"],loadUrl:null,vidUrl:null,vidThumb:null,webUrl:"https://www.fischer-international.com/en/products/steel-fixings/sleeve-anchor/sleeve-anchor-fsl/sleeve-anchor-fsl",accessories:null},
+  {name:"FWA",tag:"",cat:"Steel fixing",type:"",mats:["Non-cracked concrete"],ETA:0,life:0,fire:0,seis:0,fR:"",lY:"",wk:"",cu:"",features:[],imgs:["https://raw.githubusercontent.com/fischerSoutheastAsia/easyguide-preview/main/image/PROD_METAL/IMG_PROD_FWA_1.webp","https://raw.githubusercontent.com/fischerSoutheastAsia/easyguide-preview/main/image/PROD_METAL/IMG_PROD_FWA_2.webp"],loadUrl:"https://fiproductmedia.azureedge.net/media/Load%20Tables/Load%20Tables%20fischer/LT_FWA_EN_T2.pdf",vidUrl:null,vidThumb:null,webUrl:"https://www.fischer.sg/en-sg/products/steel-fixings/bolt-anchor/bolt-anchor-fwa/bolt-anchor-fwa-metric",accessories:null},
   // ── ACCESSORIES (shown in Chemical fixing list + have their own detail pages) ──
-  {name:"FIS DMS Pro",tag:"",cat:"Chemical fixing",type:"Dispensor",isAccessory:true,mats:[],ETA:0,life:0,fire:0,seis:0,fR:"",lY:"",wk:"",cu:"",features:["Adapted for cartridges with 150 ml, 300 ml, 360 ml and 390 ml content.","Ergonomic design for easy single-hand operation."],imgs:["acc-fis-dms-pro.png","acc-fis-dms-pro.png"],loadUrl:null,vidUrl:null,vidThumb:null,webUrl:"https://www.fischer-international.com/en/products/chemical-fixings/accessories/dispenser/dispenser-manual/dispenser-fis-dm-s-pro",accessories:null},
-  {name:"FIS AM",tag:"",cat:"Chemical fixing",type:"Dispensor",isAccessory:true,mats:[],ETA:0,life:0,fire:0,seis:0,fR:"",lY:"",wk:"",cu:"",features:["Adapted for cartridges with 150 ml, 300 ml, 360 ml and 390 ml content.","Lightweight and durable construction for site use."],imgs:["acc-fis-am.png","acc-fis-am.png"],loadUrl:null,vidUrl:null,vidThumb:null,webUrl:"https://www.fischer.sg/en-sg/products/chemical-fixings/accessories/dispenser/dispenser-manual/dispenser-fis-am",accessories:null},
-  {name:"FIS MR Plus",tag:"",cat:"Chemical fixing",type:"Static mixer",isAccessory:true,mats:[],ETA:0,life:0,fire:0,seis:0,fR:"",lY:"",wk:"",cu:"",features:["Ensures optimal mixing of two-component injection mortars.","Included with FIS EM Plus, FIS VS Plus and FIS P Plus."],imgs:["acc-fis-mr-plus.png","acc-fis-mr-plus.png"],loadUrl:null,vidUrl:null,vidThumb:null,webUrl:"https://www.fischer.sg/en-sg/products/chemical-fixings/accessories/static-mixer",accessories:null}
+  {name:"FIS DMS Pro",tag:"",cat:"Chemical fixing",type:"Dispensor",isAccessory:true,mats:[],ETA:0,life:0,fire:0,seis:0,fR:"",lY:"",wk:"",cu:"",features:["Adapted for cartridges with 150 ml, 300 ml, 360 ml and 390 ml content.","Ergonomic design for easy single-hand operation."],imgs:["https://raw.githubusercontent.com/fischerSoutheastAsia/easyguide-preview/main/image/PROD_CHEMICAL_ACCESORY/IMG_PROD_FIS_DMS_1.webp","https://raw.githubusercontent.com/fischerSoutheastAsia/easyguide-preview/main/image/PROD_CHEMICAL_ACCESORY/IMG_PROD_FIS_DMS_2.webp"],loadUrl:null,vidUrl:null,vidThumb:null,webUrl:"https://www.fischer-international.com/en/products/chemical-fixings/accessories/dispenser/dispenser-manual/dispenser-fis-dm-s-pro",accessories:null},
+  {name:"FIS AM",tag:"",cat:"Chemical fixing",type:"Dispensor",isAccessory:true,mats:[],ETA:0,life:0,fire:0,seis:0,fR:"",lY:"",wk:"",cu:"",features:["Adapted for cartridges with 150 ml, 300 ml, 360 ml and 390 ml content.","Lightweight and durable construction for site use."],imgs:["https://raw.githubusercontent.com/fischerSoutheastAsia/easyguide-preview/main/image/PROD_CHEMICAL_ACCESORY/IMG_PROD_FIS_AM_1.webp"],loadUrl:null,vidUrl:null,vidThumb:null,webUrl:"https://www.fischer.sg/en-sg/products/chemical-fixings/accessories/dispenser/dispenser-manual/dispenser-fis-am",accessories:null},
+  {name:"FIS MR Plus",tag:"",cat:"Chemical fixing",type:"Static mixer",isAccessory:true,mats:[],ETA:0,life:0,fire:0,seis:0,fR:"",lY:"",wk:"",cu:"",features:["Ensures optimal mixing of two-component injection mortars.","Included with FIS EM Plus, FIS VS Plus and FIS P Plus."],imgs:["https://raw.githubusercontent.com/fischerSoutheastAsia/easyguide-preview/main/image/PROD_CHEMICAL_ACCESORY/IMG_PROD_FIS_MR_1.webp"],loadUrl:null,vidUrl:null,vidThumb:null,webUrl:"https://www.fischer.sg/en-sg/products/chemical-fixings/accessories/static-mixer",accessories:null}
 ];
 
 // Accessory definitions
@@ -687,11 +895,11 @@ function resetFortune(){
 
 // ── TRANSLATIONS ──
 const TR={
-en:{welcome:"Welcome to",lsp:"Hello! Please select your language to get started.",navPr:"Products",navFav:"Favorites",navSoc:"Social",navFortune:"Fortune",homeSp:"How would you like to <span style='color:#FF0000;font-weight:700;'>find your product?</span> Choose a search method below.",gMat:"Search by<br>Base Material",gCat:"Search by<br>Category",gApp:"Search by<br>Approvals",gAll:"All<br>Products",matSp:"What <span style='color:#FF0000;font-weight:700;'>base material</span> are you fixing into?",m1:"Non-cracked Concrete",m2:"Cracked Concrete",m3:"Plasterboard / Drywall",m4:"Hollow Block",m5:"ALC Lightweight Block",m6:"Solid Brick",catSp:"Which <span style='color:#FF0000;font-weight:700;'>fixing type</span> do you need?",c1:"Plastic Fixings",c2:"Chemical Fixings",c3:"Steel Fixings",appSp:"Need a specific <span style='color:#FF0000;font-weight:700;'>approval?</span> Select below.",plSp:"Here are the matching products.",detSp:"Here's everything you need to know!",favSp:"Your <span style='color:#FF0000;font-weight:700;'>saved products</span> are here. Tap ★ to remove.",socSp:"Want more <span style='color:#FF0000;font-weight:700;'>pro tips?</span> Let's stay connected!",matLbl:"Base materials",typeLbl:"Type",etaLbl:"ETA Approved",fireLbl:"Fire resistance",lifeLbl:"Service life",seisLbl:"Seismik C2",wkLbl:"Working time (max)",cuLbl:"Curing time (min)",featLbl:"Features",accLbl:"Accessory",loadLbl:"Load Table",loadSub:"Download PDF",vidLbl:"Product Video",vidSub:"Watch on YouTube",webLbl:"Product Website",webSub:"fischer.sg",again:"Search again",noFav:"No favorites yet.\nTap ☆ on any product to save it.",noProd:"No products found.",hdrHome:"Find the right fixing",hdrMat:"Base material",hdrCat:"Category",hdrApp:"Approvals",hdrAll:"All Products",hdrFav:"Favorites",hdrSoc:"Social",hdrFortune:"Fortune"},
-zh:{welcome:"欢迎使用",lsp:"您好！请选择语言开始使用。",navPr:"产品",navFav:"收藏",navSoc:"社交",navFortune:"占卜",homeSp:"您想如何<span style='color:#FF0000;font-weight:700;'>查找产品？</span>",gMat:"按基材<br>搜索",gCat:"按类别<br>搜索",gApp:"按认证<br>搜索",gAll:"所有<br>产品",matSp:"您要固定到什么<span style='color:#FF0000;font-weight:700;'>基材</span>上？",m1:"非开裂混凝土",m2:"开裂混凝土",m3:"石膏板/干墙",m4:"空心砌块",m5:"ALC轻质砌块",m6:"实心砖",catSp:"您需要哪种<span style='color:#FF0000;font-weight:700;'>固定件类型？</span>",c1:"塑料固定件",c2:"化学固定件",c3:"钢制固定件",appSp:"需要特定<span style='color:#FF0000;font-weight:700;'>认证？</span>",plSp:"以下是符合选择的产品。",detSp:"以下是所有详细信息！",favSp:"您<span style='color:#FF0000;font-weight:700;'>保存的产品</span>在这里。",socSp:"想要更多<span style='color:#FF0000;font-weight:700;'>专业建议？</span>",matLbl:"基材",typeLbl:"类型",etaLbl:"ETA认证",fireLbl:"防火性能",lifeLbl:"使用寿命",seisLbl:"抗震C2",wkLbl:"操作时间",cuLbl:"固化时间",featLbl:"Features",accLbl:"附件",loadLbl:"荷载表",loadSub:"下载PDF",vidLbl:"产品视频",vidSub:"YouTube观看",webLbl:"产品官网",webSub:"fischer.sg",again:"重新搜索",noFav:"暂无收藏。",noProd:"未找到产品。",hdrHome:"找到合适的固定件",hdrMat:"基材",hdrCat:"类别",hdrApp:"认证",hdrAll:"所有产品",hdrFav:"收藏",hdrSoc:"社交",hdrFortune:"占卜"},
-ms:{welcome:"Selamat datang ke",lsp:"Hai! Pilih bahasa anda untuk memulakan.",navPr:"Produk",navFav:"Kegemaran",navSoc:"Sosial",navFortune:"Nasib",homeSp:"Bagaimana anda ingin <span style='color:#FF0000;font-weight:700;'>mencari produk?</span>",gMat:"Cari Mengikut<br>Jenis Permukaan",gCat:"Cari mengikut<br>Kategori",gApp:"Cari Mengikut<br>Pensijilan",gAll:"Semua<br>Produk",matSp:"Apakah <span style='color:#FF0000;font-weight:700;'>bahan asas</span> yang anda pasang?",m1:"Konkrit Tidak Retak",m2:"Konkrit Retak",m3:"Papan Plaster / Drywall",m4:"Blok Berongga",m5:"Blok Ringan ALC",m6:"Bata Pepejal",catSp:"Jenis <span style='color:#FF0000;font-weight:700;'>pengikat</span> yang anda perlukan?",c1:"Penambat Plastik",c2:"Penambat Kimia",c3:"Penambat Keluli",appSp:"Perlukan <span style='color:#FF0000;font-weight:700;'>lulusan</span> tertentu?",plSp:"Berikut produk yang sepadan.",detSp:"Inilah semua yang perlu anda tahu!",favSp:"Produk <span style='color:#FF0000;font-weight:700;'>tersimpan</span> anda ada di sini.",socSp:"Mahukan lebih banyak <span style='color:#FF0000;font-weight:700;'>tip pro?</span>",matLbl:"Bahan asas",typeLbl:"Jenis",etaLbl:"Diluluskan ETA",fireLbl:"Rintangan Api",lifeLbl:"Tempoh Perkhidmatan Produk",seisLbl:"Seismik C2",wkLbl:"Masa kerja",cuLbl:"Masa rawatan",featLbl:"Features",accLbl:"Aksesori",loadLbl:"Jadual Beban",loadSub:"Muat turun PDF",vidLbl:"Video Produk",vidSub:"Tonton di YouTube",webLbl:"Laman Produk",webSub:"fischer.sg",again:"Cari semula",noFav:"Tiada kegemaran.",noProd:"Tiada produk dijumpai.",hdrHome:"Cari pengikat yang tepat",hdrMat:"Bahan asas",hdrCat:"Kategori",hdrApp:"Lulusan",hdrAll:"Semua Produk",hdrFav:"Kegemaran",hdrSoc:"Sosial",hdrFortune:"Nasib"},
-ta:{welcome:"வரவேற்கிறோம்",lsp:"வணக்கம்! மொழியை தேர்ந்தெடுக்கவும்.",navPr:"பொருட்கள்",navFav:"பிடித்தவை",navSoc:"சமூகம்",navFortune:"அதிர்ஷ்டம்",homeSp:"உங்கள் <span style='color:#FF0000;font-weight:700;'>பொருளை எவ்வாறு கண்டறிய</span> விரும்புகிறீர்கள்?",gMat:"அடிப்படை பொருளால்<br>தேடுங்கள்",gCat:"வகையால்<br>தேடுங்கள்",gApp:"அங்கீகாரத்தால்<br>தேடுங்கள்",gAll:"அனைத்து<br>பொருட்கள்",matSp:"நீங்கள் எந்த <span style='color:#FF0000;font-weight:700;'>அடிப்படை பொருளில்</span> இணைக்கிறீர்கள்?",m1:"விரிசல் இல்லாத கான்கிரீட்",m2:"விரிசல் உள்ள கான்கிரீட்",m3:"பிளாஸ்டர்போர்டு / ட்ரைவால்",m4:"ஹாலோ பிளாக்",m5:"ALC லைட்வெய்ட் பிளாக்",m6:"திடமான செங்கல்",catSp:"உங்களுக்கு எந்த <span style='color:#FF0000;font-weight:700;'>இணைப்பு வகை</span> தேவை?",c1:"பிளாஸ்டிக் இணைப்புகள்",c2:"கெமிக்கல் இணைப்புகள்",c3:"இரும்பு இணைப்புகள்",appSp:"குறிப்பிட்ட <span style='color:#FF0000;font-weight:700;'>அங்கீகாரம்</span> தேவையா?",plSp:"உங்கள் தேர்வுக்கு பொருந்தும் பொருட்கள்.",detSp:"இதோ அனைத்து விவரங்களும்!",favSp:"உங்கள் <span style='color:#FF0000;font-weight:700;'>சேமித்த பொருட்கள்</span> இங்கே.",socSp:"மேலும் <span style='color:#FF0000;font-weight:700;'>தொழில்முறை குறிப்புகள்</span> வேண்டுமா?",matLbl:"அடிப்படை பொருட்கள்",typeLbl:"வகை",etaLbl:"ETA அங்கீகரிக்கப்பட்டது",fireLbl:"தீ எதிர்ப்பு",lifeLbl:"சேவை ஆயுள்",seisLbl:"பூகம்ப C2",wkLbl:"வேலை நேரம்",cuLbl:"குணமடையும் நேரம்",featLbl:"Features",accLbl:"துணைப்பொருள்",loadLbl:"சுமை அட்டவணை",loadSub:"PDF பதிவிறக்கம்",vidLbl:"தயாரிப்பு வீடியோ",vidSub:"YouTube இல் பார்க்கவும்",webLbl:"தயாரிப்பு இணையதளம்",webSub:"fischer.sg",again:"மீண்டும் தேடுங்கள்",noFav:"பிடித்தவை இல்லை.",noProd:"பொருட்கள் கிடைக்கவில்லை.",hdrHome:"சரியான இணைப்பை கண்டறியவும்",hdrMat:"அடிப்படை பொருள்",hdrCat:"வகை",hdrApp:"அங்கீகாரம்",hdrAll:"அனைத்து பொருட்கள்",hdrFav:"பிடித்தவை",hdrSoc:"சமூகம்",hdrFortune:"அதிர்ஷ்டம்"},
-bn:{welcome:"স্বাগতম",lsp:"হ্যালো! শুরু করতে ভাষা নির্বাচন করুন।",navPr:"পণ্য",navFav:"পছন্দের",navSoc:"সোশ্যাল",navFortune:"ভাগ্য",homeSp:"আপনি কীভাবে <span style='color:#FF0000;font-weight:700;'>পণ্য খুঁজতে</span> চান?",gMat:"বেস ম্যাটেরিয়াল<br>অনুযায়ী খুঁজুন",gCat:"ক্যাটাগরি<br>অনুযায়ী খুঁজুন",gApp:"অনুমোদন<br>অনুযায়ী খুঁজুন",gAll:"সব<br>পণ্য",matSp:"আপনি কোন <span style='color:#FF0000;font-weight:700;'>বেস ম্যাটেরিয়ালে</span> ফিক্স করছেন?",m1:"ফাটল-মুক্ত কংক্রিট",m2:"ফাটল কংক্রিট",m3:"প্লাস্টারবোর্ড / ড্রাইওয়াল",m4:"ফাঁপা ব্লক",m5:"ALC লাইটওয়েট ব্লক",m6:"শক্ত ইট",catSp:"আপনার কোন <span style='color:#FF0000;font-weight:700;'>ফিক্সিং ধরন</span> দরকার?",c1:"প্লাস্টিক ফিক্সিং",c2:"কেমিক্যাল ফিক্সিং",c3:"স্টিল ফিক্সিং",appSp:"নির্দিষ্ট <span style='color:#FF0000;font-weight:700;'>অনুমোদন</span> দরকার?",plSp:"আপনার নির্বাচন অনুযায়ী পণ্যগুলো।",detSp:"এখানে সব বিস্তারিত তথ্য!",favSp:"আপনার <span style='color:#FF0000;font-weight:700;'>সংরক্ষিত পণ্য</span> এখানে।",socSp:"আরও <span style='color:#FF0000;font-weight:700;'>প্রো টিপস</span> চান?",matLbl:"বেস ম্যাটেরিয়াল",typeLbl:"টাইপ",etaLbl:"ETA অনুমোদিত",fireLbl:"অগ্নি প্রতিরোধ",lifeLbl:"সার্ভিস লাইফ",seisLbl:"সিসমিক C2",wkLbl:"কাজের সময়",cuLbl:"কিউরিং সময়",featLbl:"Features",accLbl:"আনুষাঙ্গিক",loadLbl:"লোড টেবিল",loadSub:"PDF ডাউনলোড",vidLbl:"পণ্য ভিডিও",vidSub:"YouTube-এ দেখুন",webLbl:"পণ্য ওয়েবসাইট",webSub:"fischer.sg",again:"আবার অনুসন্ধান করুন",noFav:"পছন্দের নেই।",noProd:"কোনো পণ্য পাওয়া যায়নি।",hdrHome:"সঠিক ফিক্সিং খুঁজুন",hdrMat:"বেস ম্যাটেরিয়াল",hdrCat:"ক্যাটাগরি",hdrApp:"অনুমোদন",hdrAll:"সব পণ্য",hdrFav:"পছন্দের",hdrSoc:"সোশ্যাল",hdrFortune:"ভাগ্য"}
+en:{welcome:"Welcome to",lsp:"Hello! Please select your language to get started.",navPr:"Products",navFav:"Favorites",navCmp:"Compare",navSoc:"Social",navFortune:"Fortune",homeSp:"How would you like to <span style='color:#FF0000;font-weight:700;'>find your product?</span> Choose a search method below.",gMat:"Search by<br>Base Material",gCat:"Search by<br>Category",gApp:"Search by<br>Approvals",gAll:"All<br>Products",matSp:"What <span style='color:#FF0000;font-weight:700;'>base material</span> are you fixing into?",m1:"Non-cracked Concrete",m2:"Cracked Concrete",m3:"Plasterboard / Drywall",m4:"Hollow Block",m5:"ALC Lightweight Block",m6:"Solid Brick",catSp:"Which <span style='color:#FF0000;font-weight:700;'>fixing type</span> do you need?",c1:"Plastic Fixings",c2:"Chemical Fixings",c3:"Steel Fixings",appSp:"Need a specific <span style='color:#FF0000;font-weight:700;'>approval?</span> Select below.",plSp:"Here are the matching products.",detSp:"Here's everything you need to know!",favSp:"Your <span style='color:#FF0000;font-weight:700;'>saved products</span> are here. Tap ★ to remove.",socSp:"Want more <span style='color:#FF0000;font-weight:700;'>pro tips?</span> Let's stay connected!",matLbl:"Base materials",typeLbl:"Type",etaLbl:"ETA Approved",fireLbl:"Fire resistance",lifeLbl:"Service life",seisLbl:"Seismic C2",wkLbl:"Working time (max)",cuLbl:"Curing time (min)",featLbl:"Features",accLbl:"Accessory",loadLbl:"Load Table",loadSub:"Download PDF",vidLbl:"Product Video",vidSub:"Watch on YouTube",webLbl:"Product Website",webSub:"fischer.sg",again:"Search again",noFav:"No favorites yet.\nTap ☆ on any product to save it.",noProd:"No products found.",hdrHome:"Find the right fixing",hdrMat:"Base material",hdrCat:"Category",hdrApp:"Approvals",hdrAll:"All Products",hdrFav:"Favorites",hdrCmp:"Compare",hdrSoc:"Social",hdrFortune:"Fortune"},
+zh:{welcome:"欢迎使用",lsp:"您好！请选择语言开始使用。",navPr:"产品",navFav:"收藏",navCmp:"对比",navSoc:"社交",navFortune:"占卜",homeSp:"您想如何<span style='color:#FF0000;font-weight:700;'>查找产品？</span>",gMat:"按基材<br>搜索",gCat:"按类别<br>搜索",gApp:"按认证<br>搜索",gAll:"所有<br>产品",matSp:"您要固定到什么<span style='color:#FF0000;font-weight:700;'>基材</span>上？",m1:"非开裂混凝土",m2:"开裂混凝土",m3:"石膏板/干墙",m4:"空心砌块",m5:"ALC轻质砌块",m6:"实心砖",catSp:"您需要哪种<span style='color:#FF0000;font-weight:700;'>固定件类型？</span>",c1:"塑料固定件",c2:"化学固定件",c3:"钢制固定件",appSp:"需要特定<span style='color:#FF0000;font-weight:700;'>认证？</span>",plSp:"以下是符合选择的产品。",detSp:"以下是所有详细信息！",favSp:"您<span style='color:#FF0000;font-weight:700;'>保存的产品</span>在这里。",socSp:"想要更多<span style='color:#FF0000;font-weight:700;'>专业建议？</span>",matLbl:"基材",typeLbl:"类型",etaLbl:"ETA认证",fireLbl:"防火性能",lifeLbl:"使用寿命",seisLbl:"抗震C2",wkLbl:"操作时间",cuLbl:"固化时间",featLbl:"Features",accLbl:"附件",loadLbl:"荷载表",loadSub:"下载PDF",vidLbl:"产品视频",vidSub:"YouTube观看",webLbl:"产品官网",webSub:"fischer.sg",again:"重新搜索",noFav:"暂无收藏。",noProd:"未找到产品。",hdrHome:"找到合适的固定件",hdrMat:"基材",hdrCat:"类别",hdrApp:"认证",hdrAll:"所有产品",hdrFav:"收藏",hdrCmp:"对比",hdrSoc:"社交",hdrFortune:"占卜"},
+ms:{welcome:"Selamat datang ke",lsp:"Hai! Pilih bahasa anda untuk memulakan.",navPr:"Produk",navFav:"Kegemaran",navCmp:"Bandingkan",navSoc:"Sosial",navFortune:"Nasib",homeSp:"Bagaimana anda ingin <span style='color:#FF0000;font-weight:700;'>mencari produk?</span>",gMat:"Cari Mengikut<br>Jenis Permukaan",gCat:"Cari mengikut<br>Kategori",gApp:"Cari Mengikut<br>Pensijilan",gAll:"Semua<br>Produk",matSp:"Apakah <span style='color:#FF0000;font-weight:700;'>bahan asas</span> yang anda pasang?",m1:"Konkrit Tidak Retak",m2:"Konkrit Retak",m3:"Papan Plaster / Drywall",m4:"Blok Berongga",m5:"Blok Ringan ALC",m6:"Bata Pepejal",catSp:"Jenis <span style='color:#FF0000;font-weight:700;'>pengikat</span> yang anda perlukan?",c1:"Penambat Plastik",c2:"Penambat Kimia",c3:"Penambat Keluli",appSp:"Perlukan <span style='color:#FF0000;font-weight:700;'>lulusan</span> tertentu?",plSp:"Berikut produk yang sepadan.",detSp:"Inilah semua yang perlu anda tahu!",favSp:"Produk <span style='color:#FF0000;font-weight:700;'>tersimpan</span> anda ada di sini.",socSp:"Mahukan lebih banyak <span style='color:#FF0000;font-weight:700;'>tip pro?</span>",matLbl:"Bahan asas",typeLbl:"Jenis",etaLbl:"Diluluskan ETA",fireLbl:"Rintangan Api",lifeLbl:"Tempoh Perkhidmatan Produk",seisLbl:"Seismik C2",wkLbl:"Masa kerja",cuLbl:"Masa rawatan",featLbl:"Features",accLbl:"Aksesori",loadLbl:"Jadual Beban",loadSub:"Muat turun PDF",vidLbl:"Video Produk",vidSub:"Tonton di YouTube",webLbl:"Laman Produk",webSub:"fischer.sg",again:"Cari semula",noFav:"Tiada kegemaran.",noProd:"Tiada produk dijumpai.",hdrHome:"Cari pengikat yang tepat",hdrMat:"Bahan asas",hdrCat:"Kategori",hdrApp:"Lulusan",hdrAll:"Semua Produk",hdrFav:"Kegemaran",hdrCmp:"Bandingkan",hdrSoc:"Sosial",hdrFortune:"Nasib"},
+ta:{welcome:"வரவேற்கிறோம்",lsp:"வணக்கம்! மொழியை தேர்ந்தெடுக்கவும்.",navPr:"பொருட்கள்",navFav:"பிடித்தவை",navCmp:"ஒப்பிடு",navSoc:"சமூகம்",navFortune:"அதிர்ஷ்டம்",homeSp:"உங்கள் <span style='color:#FF0000;font-weight:700;'>பொருளை எவ்வாறு கண்டறிய</span> விரும்புகிறீர்கள்?",gMat:"அடிப்படை பொருளால்<br>தேடுங்கள்",gCat:"வகையால்<br>தேடுங்கள்",gApp:"அங்கீகாரத்தால்<br>தேடுங்கள்",gAll:"அனைத்து<br>பொருட்கள்",matSp:"நீங்கள் எந்த <span style='color:#FF0000;font-weight:700;'>அடிப்படை பொருளில்</span> இணைக்கிறீர்கள்?",m1:"விரிசல் இல்லாத கான்கிரீட்",m2:"விரிசல் உள்ள கான்கிரீட்",m3:"பிளாஸ்டர்போர்டு / ட்ரைவால்",m4:"ஹாலோ பிளாக்",m5:"ALC லைட்வெய்ட் பிளாக்",m6:"திடமான செங்கல்",catSp:"உங்களுக்கு எந்த <span style='color:#FF0000;font-weight:700;'>இணைப்பு வகை</span> தேவை?",c1:"பிளாஸ்டிக் இணைப்புகள்",c2:"கெமிக்கல் இணைப்புகள்",c3:"இரும்பு இணைப்புகள்",appSp:"குறிப்பிட்ட <span style='color:#FF0000;font-weight:700;'>அங்கீகாரம்</span> தேவையா?",plSp:"உங்கள் தேர்வுக்கு பொருந்தும் பொருட்கள்.",detSp:"இதோ அனைத்து விவரங்களும்!",favSp:"உங்கள் <span style='color:#FF0000;font-weight:700;'>சேமித்த பொருட்கள்</span> இங்கே.",socSp:"மேலும் <span style='color:#FF0000;font-weight:700;'>தொழில்முறை குறிப்புகள்</span> வேண்டுமா?",matLbl:"அடிப்படை பொருட்கள்",typeLbl:"வகை",etaLbl:"ETA அங்கீகரிக்கப்பட்டது",fireLbl:"தீ எதிர்ப்பு",lifeLbl:"சேவை ஆயுள்",seisLbl:"பூகம்ப C2",wkLbl:"வேலை நேரம்",cuLbl:"குணமடையும் நேரம்",featLbl:"Features",accLbl:"துணைப்பொருள்",loadLbl:"சுமை அட்டவணை",loadSub:"PDF பதிவிறக்கம்",vidLbl:"தயாரிப்பு வீடியோ",vidSub:"YouTube இல் பார்க்கவும்",webLbl:"தயாரிப்பு இணையதளம்",webSub:"fischer.sg",again:"மீண்டும் தேடுங்கள்",noFav:"பிடித்தவை இல்லை.",noProd:"பொருட்கள் கிடைக்கவில்லை.",hdrHome:"சரியான இணைப்பை கண்டறியவும்",hdrMat:"அடிப்படை பொருள்",hdrCat:"வகை",hdrApp:"அங்கீகாரம்",hdrAll:"அனைத்து பொருட்கள்",hdrFav:"பிடித்தவை",hdrCmp:"ஒப்பிடு",hdrSoc:"சமூகம்",hdrFortune:"அதிர்ஷ்டம்"},
+bn:{welcome:"স্বাগতম",lsp:"হ্যালো! শুরু করতে ভাষা নির্বাচন করুন।",navPr:"পণ্য",navFav:"পছন্দের",navCmp:"তুলনা",navSoc:"সোশ্যাল",navFortune:"ভাগ্য",homeSp:"আপনি কীভাবে <span style='color:#FF0000;font-weight:700;'>পণ্য খুঁজতে</span> চান?",gMat:"বেস ম্যাটেরিয়াল<br>অনুযায়ী খুঁজুন",gCat:"ক্যাটাগরি<br>অনুযায়ী খুঁজুন",gApp:"অনুমোদন<br>অনুযায়ী খুঁজুন",gAll:"সব<br>পণ্য",matSp:"আপনি কোন <span style='color:#FF0000;font-weight:700;'>বেস ম্যাটেরিয়ালে</span> ফিক্স করছেন?",m1:"ফাটল-মুক্ত কংক্রিট",m2:"ফাটল কংক্রিট",m3:"প্লাস্টারবোর্ড / ড্রাইওয়াল",m4:"ফাঁপা ব্লক",m5:"ALC লাইটওয়েট ব্লক",m6:"শক্ত ইট",catSp:"আপনার কোন <span style='color:#FF0000;font-weight:700;'>ফিক্সিং ধরন</span> দরকার?",c1:"প্লাস্টিক ফিক্সিং",c2:"কেমিক্যাল ফিক্সিং",c3:"স্টিল ফিক্সিং",appSp:"নির্দিষ্ট <span style='color:#FF0000;font-weight:700;'>অনুমোদন</span> দরকার?",plSp:"আপনার নির্বাচন অনুযায়ী পণ্যগুলো।",detSp:"এখানে সব বিস্তারিত তথ্য!",favSp:"আপনার <span style='color:#FF0000;font-weight:700;'>সংরক্ষিত পণ্য</span> এখানে।",socSp:"আরও <span style='color:#FF0000;font-weight:700;'>প্রো টিপস</span> চান?",matLbl:"বেস ম্যাটেরিয়াল",typeLbl:"টাইপ",etaLbl:"ETA অনুমোদিত",fireLbl:"অগ্নি প্রতিরোধ",lifeLbl:"সার্ভিস লাইফ",seisLbl:"সিসমিক C2",wkLbl:"কাজের সময়",cuLbl:"কিউরিং সময়",featLbl:"Features",accLbl:"আনুষাঙ্গিক",loadLbl:"লোড টেবিল",loadSub:"PDF ডাউনলোড",vidLbl:"পণ্য ভিডিও",vidSub:"YouTube-এ দেখুন",webLbl:"পণ্য ওয়েবসাইট",webSub:"fischer.sg",again:"আবার অনুসন্ধান করুন",noFav:"পছন্দের নেই।",noProd:"কোনো পণ্য পাওয়া যায়নি।",hdrHome:"সঠিক ফিক্সিং খুঁজুন",hdrMat:"বেস ম্যাটেরিয়াল",hdrCat:"ক্যাটাগরি",hdrApp:"অনুমোদন",hdrAll:"সব পণ্য",hdrFav:"পছন্দের",hdrCmp:"তুলনা",hdrSoc:"সোশ্যাল",hdrFortune:"ভাগ্য"}
 };
 
 let CL='en',FAV=new Set(),PBS='home',CDP=null,CUR='lang';
@@ -710,6 +918,7 @@ const HDR_CFG={
   pl:{title:null,back:true,logo:false,custom:true},
   det:{title:null,back:true,logo:false,det:true},
   fav:{title:'hdrFav',back:false,logo:false},
+  cmp:{title:'hdrCmp',back:false,logo:false},
   soc:{title:'hdrSoc',back:false,logo:false},
   fortune:{title:'hdrFortune',back:false,logo:false}
 };
@@ -776,17 +985,8 @@ function apT(){
   si('cat-sp',T.catSp);st('c1',T.c1);st('c2',T.c2);st('c3',T.c3);
   si('app-sp',T.appSp);si('fav-sp',T.favSp);si('soc-sp',T.socSp);
   st('app-lbl-eta',T.etaLbl);st('app-lbl-fire',T.fireLbl);st('app-lbl-life',T.lifeLbl);st('app-lbl-seis',T.seisLbl);
-  st('nav-pr',T.navPr);st('nav-fav',T.navFav);st('nav-soc',T.navSoc);st('nav-fortune',T.navFortune);
+  st('nav-pr',T.navPr);st('nav-fav',T.navFav);st('nav-cmp',T.navCmp||'Compare');st('nav-soc',T.navSoc);st('nav-fortune',T.navFortune);
   si('pl-sp',T.plSp);updateHdr(CUR);
-}
-
-function setNavActive(tab){
-  ['pr','fav','soc','fortune'].forEach(x=>{
-    const svg=$(x==='pr'?'ni-pr-svg':x==='fav'?'ni-fav-svg':x==='soc'?'ni-soc-svg':'ni-fortune-svg');
-    const sEl=$(x==='pr'?'nav-pr':x==='fav'?'nav-fav':x==='soc'?'nav-soc':'nav-fortune');
-    const c=x===tab?'#FF0000':'#ccc';
-    if(svg)svg.setAttribute('stroke',c);if(sEl)sEl.style.color=c;
-  });
 }
 
 function updFavBadge(){const b=$('fav-badge');if(FAV.size>0){const prev=b.textContent;b.style.display='flex';b.textContent=FAV.size;if(String(FAV.size)!==prev){b.style.animation='none';b.offsetHeight;b.style.animation='badgePop 0.3s ease forwards';}}else{b.style.display='none';}}
@@ -795,6 +995,7 @@ function nC(tab){
   setNavActive(tab);
   if(tab==='pr'){slideToPanel('home','back');}
   else if(tab==='fav'){rFav();slideToPanel('fav','forward');}
+  else if(tab==='cmp'){rCmp();slideToPanel('cmp','forward');}
   else if(tab==='soc'){slideToPanel('soc','forward');}
   else if(tab==='fortune'){slideToPanel('fortune','forward');}
 }
@@ -831,6 +1032,126 @@ const starEmpty=`<svg width="18" height="18" viewBox="0 0 24 24" fill="none" str
 const starFilledBig=`<svg width="20" height="20" viewBox="0 0 24 24" fill="#f5c518" stroke="#f5c518" stroke-width="2.5" stroke-linecap="square" stroke-linejoin="miter"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>`;
 const starEmptyBig=`<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#ccc" stroke-width="2.5" stroke-linecap="square" stroke-linejoin="miter"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>`;
 
+// ── COMPARE SVG ICONS ──
+const scaleIcon=(active,small)=>{const s=small?18:20;const c=active?'#f5c518':'#ccc';return `<svg width="${s}" height="${s}" viewBox="0 0 24 24" fill="none" stroke="${c}" stroke-width="2.5" stroke-linecap="square" stroke-linejoin="miter"><path d="M12 3v18M5 8l-3 5h6L5 8zM19 8l-3 5h6L19 8z"/><line x1="5" y1="21" x2="19" y2="21"/></svg>`;};
+
+let CMP=new Set(); // Compare set (max 2)
+
+function tCmpBtn(e,name,btn){
+  e.stopPropagation();
+  if(CMP.has(name)){
+    CMP.delete(name);
+    btn.innerHTML=scaleIcon(false,true);
+  } else {
+    if(CMP.size>=3){
+      return;
+    }
+    CMP.add(name);
+    btn.innerHTML=scaleIcon(true,true);
+    spawnSparkle(btn);
+  }
+  updCmpBadge();
+  // sync detail page scale btn if open
+  const df=$('d-cmp');
+  if(df){df.innerHTML=scaleIcon(CMP.has(name),false);}
+}
+
+function tCmpBtnDet(name,btn){
+  if(CMP.has(name)){
+    CMP.delete(name);btn.innerHTML=scaleIcon(false,false);
+  } else {
+    if(CMP.size>=3){btn.style.opacity='0.3';setTimeout(()=>btn.style.opacity='1',300);return;}
+    CMP.add(name);btn.innerHTML=scaleIcon(true,false);spawnSparkle(btn);
+  }
+  updCmpBadge();
+}
+
+function updCmpBadge(){
+  const b=$('cmp-badge');
+  if(CMP.size>0){b.style.display='flex';b.textContent=CMP.size;b.style.animation='none';b.offsetHeight;b.style.animation='badgePop 0.3s ease forwards';}
+  else{b.style.display='none';}
+}
+
+function rCmp(){
+  const area=$('cmp-c');area.innerHTML='';
+  const T=t();
+  const list=[...CMP].map(n=>PD.find(p=>p.name===n)).filter(Boolean);
+
+  if(!list.length){
+    const emptyImgSrc = window.ICON_COMPARE_IMG_ICON_COMPARE_EMPTY || '';
+    area.innerHTML=`<div style="display:flex;flex-direction:column;align-items:center;justify-content:center;padding:60px 20px;text-align:center;color:#aaa;line-height:1.7;">
+      <div style="width:80px;height:80px;display:flex;align-items:center;justify-content:center;margin-bottom:18px;opacity:0.25;" class="mascot-anim">
+        <img src="${emptyImgSrc}" style="width:80px;height:80px;object-fit:contain;" onerror="this.style.display='none'">
+      </div>
+      <div style="font-size:16px;font-weight:500;color:#888;margin-bottom:4px;">No products to compare.</div>
+      <div style="font-size:13px;color:#aaa;">Tap <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#aaa" stroke-width="2.5" stroke-linecap="square"><path d="M12 3v18M5 8l-3 5h6L5 8zM19 8l-3 5h6L19 8z"/><line x1="5" y1="21" x2="19" y2="21"/></svg> on any product to add it.</div>
+    </div>`;
+    return;
+  }
+
+  // ── comparison table ──
+  const SPEC_KEYS=[
+    {key:'cat',   label:'Category'},
+    {key:'mats',  label:T.matLbl||'Base materials'},
+    {key:'ETA',   label:T.etaLbl||'ETA Approved'},
+    {key:'fire',  label:T.fireLbl||'Fire resistance'},
+    {key:'life',  label:T.lifeLbl||'Service life'},
+    {key:'seis',  label:T.seisLbl||'Seismic C2'},
+    {key:'wk',    label:T.wkLbl||'Working time'},
+    {key:'cu',    label:T.cuLbl||'Curing time'},
+  ];
+
+  // header row with product name + image
+  let hdrCols=list.map(p=>{
+    const iconSrc=getProductIcon(p.name)||p.imgs[0];
+    return `<td style="text-align:center;padding:12px 8px 8px;vertical-align:top;width:${list.length===1?'60%':list.length===2?'50%':'33%'};">
+      <div style="width:56px;height:56px;margin:0 auto 8px;overflow:hidden;cursor:pointer;" onclick="sD('${p.name}')">
+        <img src="${iconSrc}" style="width:56px;height:56px;object-fit:cover;display:block;" onerror="this.style.display='none'">
+      </div>
+      <div style="font-size:13px;font-weight:700;color:#1a1a1a;cursor:pointer;" onclick="sD('${p.name}')">${p.name}</div>
+      <button style="background:none;border:none;cursor:pointer;padding:3px;margin-top:4px;" onclick="removeCmp('${p.name}')">
+        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#bbb" stroke-width="2.5" stroke-linecap="square"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+      </button>
+    </td>`;
+  }).join('');
+  if(list.length===1) hdrCols+=`<td style="text-align:center;padding:12px 8px;color:#DDD9D4;vertical-align:middle;"><div style="font-size:11px;color:#bbb;line-height:1.4;">Add a<br>2nd product</div></td><td style="text-align:center;padding:12px 8px;color:#DDD9D4;vertical-align:middle;"><div style="font-size:11px;color:#bbb;line-height:1.4;">Add a<br>3rd product</div></td>`;
+  if(list.length===2) hdrCols+=`<td style="text-align:center;padding:12px 8px;color:#DDD9D4;vertical-align:middle;"><div style="font-size:11px;color:#bbb;line-height:1.4;">Add a<br>3rd product</div></td>`;
+
+  let tableRows=SPEC_KEYS.map(spec=>{
+    const vals=list.map(p=>{
+      let v='—';
+      if(spec.key==='mats') v=p.mats&&p.mats.length?p.mats.join(', '):'—';
+      else if(spec.key==='ETA') v=p.ETA?'<span style="color:#FF0000;font-weight:700;">✓</span>':'—';
+      else if(spec.key==='fire') v=p.fire?`<span style="color:#FF0000;font-weight:700;">${p.fR}</span>`:'—';
+      else if(spec.key==='life') v=p.life?`<span style="color:#FF0000;font-weight:700;">${p.lY}</span>`:'—';
+      else if(spec.key==='seis') v=p.seis?'<span style="color:#FF0000;font-weight:700;">✓</span>':'—';
+      else if(spec.key==='wk') v=p.wk||'—';
+      else if(spec.key==='cu') v=p.cu||'—';
+      else if(spec.key==='cat') v=p.cat||'—';
+      return `<td style="text-align:center;padding:7px 6px;font-size:12px;font-weight:500;color:#1a1a1a;border-bottom:1px solid #f5f5f5;vertical-align:top;">${v}</td>`;
+    }).join('');
+    const extraTd=list.length===1?`<td style="border-bottom:1px solid #f5f5f5;"></td><td style="border-bottom:1px solid #f5f5f5;"></td>`:list.length===2?`<td style="border-bottom:1px solid #f5f5f5;"></td>`:'';
+    return `<tr><td style="padding:7px 12px;font-size:11px;font-weight:500;color:#6b6b6b;border-bottom:1px solid #f5f5f5;white-space:nowrap;vertical-align:top;">${spec.label}</td>${vals}${extraTd}</tr>`;
+  }).join('');
+
+  area.innerHTML=`<div style="padding:0 12px 16px;">
+    <div style="overflow:auto;">
+      <table style="width:100%;border-collapse:collapse;">
+        <thead><tr><td style="width:30%;"></td>${hdrCols}</tr></thead>
+        <tbody>${tableRows}</tbody>
+      </table>
+    </div>
+    <button class="search-again-btn" style="margin-top:12px;" onclick="clearCmp()">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#6b6b6b" stroke-width="2.5" stroke-linecap="square"><polyline points="1 4 1 10 7 10"/><path d="M3.51 15a9 9 0 1 0 .49-3.56"/></svg>
+      Clear Compare
+    </button>
+  </div>`;
+}
+
+function removeCmp(name){CMP.delete(name);updCmpBadge();rCmp();// sync list buttons
+  document.querySelectorAll('[data-cmp-name]').forEach(btn=>{if(btn.dataset.cmpName===name)btn.innerHTML=scaleIcon(false,true);});}
+function clearCmp(){CMP.clear();updCmpBadge();rCmp();document.querySelectorAll('[data-cmp-name]').forEach(btn=>{btn.innerHTML=scaleIcon(false,true);});}
+
 function rPL(list,title){
   const area=$('pl-c');area.innerHTML='';const T=t();
   window._plTitle=title;
@@ -844,7 +1165,7 @@ function rPL(list,title){
     const f=FAV.has(p.name);const row=document.createElement('div');row.className='prod-row';
     row.style.cssText='background:#fff;border-bottom:1px solid #E4E3DF;display:flex;align-items:center;min-height:64px;width:100%;cursor:pointer;';
     const iconSrc0=getProductIcon(p.name)||p.imgs[0];
-    row.innerHTML=`<div style="width:56px;height:56px;flex-shrink:0;overflow:hidden;" onclick="sD('${p.name}')"><img src="${iconSrc0}" style="width:56px;height:56px;object-fit:cover;display:block;" onerror="this.style.display='none'"></div><div style="flex:1;padding:12px 0 12px 14px;" onclick="sD('${p.name}')"><div style="display:flex;align-items:center;gap:6px;flex-wrap:wrap;"><span style="font-size:15px;font-weight:700;color:#1a1a1a;">${p.name}</span>${mTag(p.tag)}</div></div><div style="display:flex;align-items:center;gap:9px;flex-shrink:0;padding-right:14px;"><button style="background:none;border:none;cursor:pointer;padding:2px;line-height:1;" onclick="tFB(event,'${p.name}',this)">${f?starFilled:starEmpty}</button>${chevronRight}</div>`;
+    row.innerHTML=`<div style="width:56px;height:56px;flex-shrink:0;overflow:hidden;" onclick="sD('${p.name}')"><img src="${iconSrc0}" style="width:56px;height:56px;object-fit:cover;display:block;" onerror="this.style.display='none'"></div><div style="flex:1;padding:12px 0 12px 14px;" onclick="sD('${p.name}')"><div style="display:flex;align-items:center;gap:6px;flex-wrap:wrap;"><span style="font-size:15px;font-weight:700;color:#1a1a1a;">${p.name}</span>${mTag(p.tag)}</div></div><div style="display:flex;align-items:center;gap:9px;flex-shrink:0;padding-right:14px;"><button style="background:none;border:none;cursor:pointer;padding:2px;line-height:1;" onclick="tFB(event,'${p.name}',this)">${f?starFilled:starEmpty}</button><button style="background:none;border:none;cursor:pointer;padding:2px;line-height:1;" data-cmp-name="${p.name}" onclick="tCmpBtn(event,'${p.name}',this)">${scaleIcon(CMP.has(p.name),true)}</button>${chevronRight}</div>`;
     area.appendChild(row);
   });
 
@@ -859,7 +1180,7 @@ function rPL(list,title){
       const row=document.createElement('div');row.className='prod-row';
       row.style.cssText='background:#fff;border-bottom:1px solid #E4E3DF;display:flex;align-items:center;min-height:56px;width:100%;cursor:pointer;';
       const iconSrcAcc=getProductIcon(p.name)||p.imgs[0];
-      row.innerHTML=`<div style="width:56px;height:56px;flex-shrink:0;overflow:hidden;" onclick="sD('${p.name}')"><img src="${iconSrcAcc}" style="width:56px;height:56px;object-fit:cover;display:block;" onerror="this.style.display='none'"></div><div style="flex:1;padding:10px 0 10px 14px;" onclick="sD('${p.name}')"><div style="font-size:14px;font-weight:600;color:#1a1a1a;">${p.name}</div></div><div style="display:flex;align-items:center;gap:9px;flex-shrink:0;padding-right:14px;"><button style="background:none;border:none;cursor:pointer;padding:2px;line-height:1;" onclick="tFB(event,'${p.name}',this)">${f?starFilled:starEmpty}</button>${chevronRight}</div>`;
+      row.innerHTML=`<div style="width:56px;height:56px;flex-shrink:0;overflow:hidden;" onclick="sD('${p.name}')"><img src="${iconSrcAcc}" style="width:56px;height:56px;object-fit:cover;display:block;" onerror="this.style.display='none'"></div><div style="flex:1;padding:10px 0 10px 14px;" onclick="sD('${p.name}')"><div style="font-size:14px;font-weight:600;color:#1a1a1a;">${p.name}</div></div><div style="display:flex;align-items:center;gap:9px;flex-shrink:0;padding-right:14px;"><button style="background:none;border:none;cursor:pointer;padding:2px;line-height:1;" onclick="tFB(event,'${p.name}',this)">${f?starFilled:starEmpty}</button><button style="background:none;border:none;cursor:pointer;padding:2px;line-height:1;" data-cmp-name="${p.name}" onclick="tCmpBtn(event,'${p.name}',this)">${scaleIcon(CMP.has(p.name),true)}</button>${chevronRight}</div>`;
       area.appendChild(row);
     });
   }
@@ -930,11 +1251,11 @@ function sD(name){
   const featHTML=p.features&&p.features.length?`<div style="margin-top:0;padding-top:10px;">${p.features.map(feat=>`<div style="display:flex;align-items:flex-start;gap:8px;margin-bottom:6px;"><div style="width:5px;height:5px;background:#FF0000;flex-shrink:0;margin-top:5px;"></div><div style="font-size:13px;color:#1a1a1a;line-height:1.5;">${feat}</div></div>`).join('')}</div>`:'';
 
   const imgs=p.imgs||[];
-  // resolve filename → base64 if getProductImage is available
-  const resolvedImgs=imgs.map(src=>{if(typeof getProductImage==='function'){const b=getProductImage(src);return b||src;}return src;}).filter(Boolean);
+  // imgs are now direct GitHub raw URLs — use as-is, filter out empty strings
+  const resolvedImgs=imgs.filter(src=>src&&src.length>0);
   const totalSlides=p.vidUrl?resolvedImgs.length+1:resolvedImgs.length;
   const imgSlides=resolvedImgs.map((src,i)=>`<div style="flex:0 0 100%;width:100% !important;scroll-snap-align:start;line-height:0;overflow:hidden;"><img src="${src}" style="width:100% !important;aspect-ratio:780/439;object-fit:cover;display:block;" alt="${p.name} ${i+1}" onerror="this.parentElement.style.display='none'"></div>`).join('');
-  const _vtKey='PRODUCT_VIDEO_THUMB_IMG_IMG_PROD_'+p.name.toUpperCase().replace(/[^A-Z0-9]/g,'').replace('FISEMPLUS390S','FISEM').replace('FISVSPLUS360S','FISVS').replace('FISPPLUS300T','FISP')+'_THUMB';const _vtBase64=window[_vtKey]||null;const _vidThumbSrc=_vtBase64||(p.vidThumb||null);
+  const _vidThumbSrc=p.vidThumb||null;
   const vidSlide=p.vidUrl?`<div style="flex:0 0 100%;width:100% !important;aspect-ratio:780/439;display:block;padding:0;margin:0;scroll-snap-align:start;position:relative;cursor:pointer;overflow:hidden;" onclick="window.open('${p.vidUrl}','_blank')">${_vidThumbSrc?`<img src="${_vidThumbSrc}" style="width:100% !important;aspect-ratio:780/439;object-fit:cover;display:block;padding:0;margin:0;" alt="Video">`:'<div style="width:100%;aspect-ratio:780/439;background:#fff;"></div>'}<div style="position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:68px;height:68px;background:rgba(255,0,0,0.92);border-radius:50%;display:flex;align-items:center;justify-content:center;"><svg width="30" height="30" viewBox="0 0 24 24" fill="#fff" stroke="none" style="margin-left:4px;"><polygon points="5 3 19 12 5 21 5 3"/></svg></div><div style="position:absolute;bottom:10px;left:0;right:0;text-align:center;"><span style="background:rgba(0,0,0,0.6);color:#fff;font-size:11px;font-weight:600;padding:3px 10px;">${T.vidLbl}</span></div></div>`:'';
   const dots=Array.from({length:totalSlides},(_,i)=>{
     if(i===resolvedImgs.length&&p.vidUrl){return `<div onclick="carGo(${i})" id="dot-${i}" style="cursor:pointer;display:flex;align-items:center;justify-content:center;width:22px;height:18px;flex-shrink:0;"><svg width="13" height="13" viewBox="0 0 24 24" fill="${i===0?'#FF0000':'rgba(0,0,0,0.25)'}" stroke="none" id="dot-icon-${i}"><polygon points="5 3 19 12 5 21 5 3"/></svg></div>`;}
@@ -946,6 +1267,7 @@ function sD(name){
 
   // Fav button — shown for all products including accessories
   const favBtn=`<button id="d-fav" style="background:none;border:none;cursor:pointer;padding:0;margin-left:auto;line-height:1;" onclick="tFD('${p.name}',this)">${f?starFilledBig:starEmptyBig}</button>`;
+  const cmpBtn=`<button id="d-cmp" style="background:none;border:none;cursor:pointer;padding:0;margin-left:6px;line-height:1;" onclick="tCmpBtnDet('${p.name}',this)">${scaleIcon(CMP.has(p.name),false)}</button>`;
 
   // Accessory blocks — clickable to navigate to their own detail page
   let accHTML='';
@@ -954,7 +1276,7 @@ function sD(name){
       const acc=ACCESSORIES[aName];if(!acc)return'';
       return `<div onclick="sD('${aName}')" style="text-decoration:none;display:flex;flex-direction:column;align-items:center;gap:6px;flex:1;min-width:80px;max-width:110px;cursor:pointer;">
         <div style="width:72px;height:72px;display:flex;align-items:center;justify-content:center;border:1px solid #E4E3DF;">
-          <img src="${(typeof getProductIcon==='function'&&getProductIcon(aName))||(typeof getProductImage==='function'&&getProductImage(acc.imgSrc))||acc.imgSrc}" style="width:72px;height:72px;object-fit:contain;" onerror="this.style.display='none'">
+          <img src="${(typeof getProductIcon==='function'&&getProductIcon(aName))||(PD.find(x=>x.name===aName)&&PD.find(x=>x.name===aName).imgs[0])||''}" style="width:72px;height:72px;object-fit:contain;" onerror="this.style.display='none'">
         </div>
         <div style="text-align:center;">
           <div style="font-size:12px;font-weight:700;color:#1a1a1a;line-height:1.3;">${aName}</div>
@@ -969,7 +1291,7 @@ function sD(name){
   const aL=p.loadUrl?`<a href="${p.loadUrl}" target="_blank" style="display:flex;align-items:center;justify-content:space-between;padding:12px 14px;background:#f9f9f9;border-bottom:1px solid #E4E3DF;text-decoration:none;"><div><div style="font-size:14px;font-weight:600;color:#1a1a1a;">${T.loadLbl}</div><div style="font-size:11px;color:#6b6b6b;">${T.loadSub}</div></div>${extLink}</a>`:'';
   const aW=p.webUrl?`<a href="${p.webUrl}" target="_blank" style="display:flex;align-items:center;justify-content:space-between;padding:12px 14px;background:#f9f9f9;border-bottom:1px solid #E4E3DF;text-decoration:none;"><div><div style="font-size:14px;font-weight:600;color:#1a1a1a;">${T.webLbl}</div><div style="font-size:11px;color:#6b6b6b;">${T.webSub}</div></div>${extLink}</a>`:'';
 
-  $('det-c').innerHTML=`<div id="det-slider-box" style="width:100%;margin-left:0;margin-right:0;overflow:hidden;line-height:0;">${carousel}</div><div id="det-text-box" style="padding:0 30px;"><div style="padding-top:14px;padding-bottom:14px;"><div style="display:flex;align-items:center;gap:8px;flex-wrap:wrap;margin-bottom:4px;"><span style="font-size:22px;font-weight:700;color:#1a1a1a;">${p.name}</span>${mTag(p.tag)}${favBtn}</div><table style="width:100%;border-collapse:collapse;">${rows.join('')}</table>${featHTML}${accHTML}</div><div style="margin-top:4px;margin-bottom:12px;">${aL}${aW}</div><button class="search-again-btn" onclick="slideToPanel('home','back');setNavActive('pr');"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#6b6b6b" stroke-width="2.5" stroke-linecap="square" stroke-linejoin="miter"><path d="M19 12H5M12 5l-7 7 7 7"/></svg> ${T.again}</button></div>`;
+  $('det-c').innerHTML=`<div id="det-slider-box" style="width:100%;margin-left:0;margin-right:0;overflow:hidden;line-height:0;">${carousel}</div><div id="det-text-box" style="padding:0 30px;"><div style="padding-top:14px;padding-bottom:14px;"><div style="display:flex;align-items:center;gap:8px;flex-wrap:wrap;margin-bottom:4px;"><span style="font-size:22px;font-weight:700;color:#1a1a1a;">${p.name}</span>${mTag(p.tag)}${favBtn}${cmpBtn}</div><table style="width:100%;border-collapse:collapse;">${rows.join('')}</table>${featHTML}${accHTML}</div><div style="margin-top:4px;margin-bottom:12px;">${aL}${aW}</div><button class="search-again-btn" onclick="slideToPanel('home','back');setNavActive('pr');"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#6b6b6b" stroke-width="2.5" stroke-linecap="square" stroke-linejoin="miter"><path d="M19 12H5M12 5l-7 7 7 7"/></svg> ${T.again}</button></div>`;
   slideToPanel('det','forward');
   window._carIdx=0;window._carMax=totalSlides;window._hasVid=!!p.vidUrl;window._imgCount=resolvedImgs.length;
 }
@@ -1008,6 +1330,21 @@ function tFD(name,btn){if(FAV.has(name)){FAV.delete(name);btn.innerHTML=starEmpt
 triggerMascotAnim(document.getElementById('panel-lang'));
 updateHdr('lang');
 $('lp').style.visibility='hidden';
+
+// Initialize ICON_COMPARE assets
+(function(){
+  function initCompareAssets(){
+    var cmpImg = document.getElementById('ni-cmp-img');
+    if(cmpImg && window.ICON_COMPARE_IMG_ICON_COMPARE_SCALE){
+      cmpImg.src = window.ICON_COMPARE_IMG_ICON_COMPARE_SCALE;
+    }
+  }
+  if(document.readyState==='loading'){
+    document.addEventListener('DOMContentLoaded', initCompareAssets);
+  } else {
+    initCompareAssets();
+  }
+})();
 
 
 </script>
@@ -1120,6 +1457,27 @@ const fixSliderWidth = () => {
 window.addEventListener('load', fixSliderWidth);
 window.addEventListener('resize', fixSliderWidth);
 </script>
-<script src="sound.js"></script>
+<script src="https://raw.githubusercontent.com/fischerSoutheastAsia/easyguide-preview/main/sound.js"></script>
+
+<script>
+// ── カルーセル タッチスワイプ強化 ──
+(function(){
+  let _startX=0,_startY=0,_isDragging=false;
+  function attachTouch(track){
+    if(!track||track._tb)return;
+    track._tb=true;
+    track.addEventListener('touchstart',function(e){_startX=e.touches[0].clientX;_startY=e.touches[0].clientY;_isDragging=false;},{passive:true});
+    track.addEventListener('touchmove',function(e){const dx=Math.abs(e.touches[0].clientX-_startX),dy=Math.abs(e.touches[0].clientY-_startY);if(dx>dy&&dx>8)_isDragging=true;},{passive:true});
+    track.addEventListener('touchend',function(e){
+      if(!_isDragging)return;
+      const diff=_startX-e.changedTouches[0].clientX;
+      const max=window._carMax||1;let idx=window._carIdx||0;
+      if(Math.abs(diff)>track.offsetWidth*0.2){idx=diff>0?Math.min(idx+1,max-1):Math.max(idx-1,0);carGo(idx);}
+    },{passive:true});
+  }
+  new MutationObserver(function(){const t=document.getElementById('car-track');if(t)attachTouch(t);}).observe(document.body,{childList:true,subtree:true});
+  document.addEventListener('DOMContentLoaded',function(){const t=document.getElementById('car-track');if(t)attachTouch(t);});
+})();
+</script>
 </body>
 </html>
