@@ -166,9 +166,14 @@ window.PRODUCT_CHEMICAL_IMG_IMG_PROD_FIS_MR_1   = "https://raw.githubusercontent
     <img src="https://raw.githubusercontent.com/fischerSoutheastAsia/easyguide-preview/main/image/LOGO/IMG_LOGO_FISCHER.webp" style="width:97px;height:16px;object-fit:contain;" alt="Fischer logo">
   </div>
   <div id="hdr-title" style="font-family:'Inter',sans-serif;font-weight:700;font-size:15px;color:#1a1a1a;display:none;flex:1;text-align:center;padding:0 8px;"></div>
-  <button id="lp" onclick="gL()" style="background:none;border:none;cursor:pointer;padding:6px;color:#1a1a1a;">
-    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#1a1a1a" stroke-width="2.5" stroke-linecap="square" stroke-linejoin="miter"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
-  </button>
+  <div style="display:flex;align-items:center;gap:2px;">
+    <button id="hdr-info-btn" onclick="showColorCodeInfo()" style="background:none;border:none;cursor:pointer;padding:6px;color:#1a1a1a;display:none;align-items:center;">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#1a1a1a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="8.5" stroke-width="2.5"/><line x1="12" y1="11" x2="12" y2="16"/></svg>
+    </button>
+    <button id="lp" onclick="gL()" style="background:none;border:none;cursor:pointer;padding:6px;color:#1a1a1a;">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#1a1a1a" stroke-width="2.5" stroke-linecap="square" stroke-linejoin="miter"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+    </button>
+  </div>
 </div>
 
 <!-- SLIDE CONTAINER -->
@@ -390,14 +395,8 @@ window.PRODUCT_CHEMICAL_IMG_IMG_PROD_FIS_MR_1   = "https://raw.githubusercontent
   </div>
 
   <!-- COMPARE PANEL -->
-  <div class="slide-panel pos-right" id="panel-cmp">
-    <div id="cmp-top" style="padding:16px 16px 8px;background:#fff;">
-      <div style="display:flex;align-items:center;gap:12px;padding:8px 0 16px;">
-        <div style="width:50px;height:80px;flex-shrink:0;display:flex;align-items:center;justify-content:center;" class="mascot-anim"><img src="https://raw.githubusercontent.com/fischerSoutheastAsia/easyguide-preview/main/image/MASCOT_S/IMG_MASCOT_S_WORKOUT.webp" style="width:50px;height:80px;object-fit:contain;"></div>
-        <div style="font-family:'Varela Round',sans-serif;font-size:13px;color:#1a1a1a;line-height:1.55;" class="speech-anim">Select up to <span style="color:#FF0000;font-weight:700;">3 products</span> to compare specs side by side.</div>
-      </div>
-    </div>
-    <div id="cmp-c" style="padding:0 0 20px;display:flex;flex-direction:column;"></div>
+  <div class="slide-panel pos-right" id="panel-cmp" style="overflow-x:hidden;">
+    <div id="cmp-c" style="padding:0;display:flex;flex-direction:column;flex:1;overflow:hidden;"></div>
   </div>
 
   <!-- SOC PANEL -->
@@ -474,6 +473,14 @@ window.PRODUCT_CHEMICAL_IMG_IMG_PROD_FIS_MR_1   = "https://raw.githubusercontent
 
 </div><!-- end slide-container -->
 
+<!-- Rotate popup (portrait only, shown when Compare panel is active) -->
+<div id="rotate-popup" style="display:none;position:absolute;bottom:76px;left:50%;transform:translateX(-50%);z-index:200;pointer-events:none;">
+  <div style="background:rgba(0,0,0,0.72);color:#fff;font-size:11px;font-weight:500;padding:8px 14px;border-radius:20px;white-space:nowrap;display:flex;align-items:center;gap:7px;backdrop-filter:blur(4px);">
+    <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round"><rect x="4" y="2" width="10" height="16" rx="2"/><path d="M17 9l3 3-3 3"/><line x1="14" y1="12" x2="20" y2="12"/></svg>
+    Rotate your smartphone to enlarge the table
+  </div>
+</div>
+
 <!-- NAV -->
 <style>
 /* ── Bump Nav ── */
@@ -511,7 +518,7 @@ window.PRODUCT_CHEMICAL_IMG_IMG_PROD_FIS_MR_1   = "https://raw.githubusercontent
     <button class="ni" id="ni-cmp" onclick="nC('cmp')">
       <div class="ni-icon-wrap" id="ni-cmp-wrap">
         <div style="position:relative;display:inline-flex;">
-          <img id="ni-cmp-img" src="" width="22" height="22" style="object-fit:contain;display:block;opacity:0.35;filter:grayscale(1);" alt="Compare">
+          <img id="ni-cmp-img" src="" width="28" height="28" style="display:block;object-fit:contain;filter:grayscale(1) opacity(0.35);" alt="Compare">
           <span id="cmp-badge" style="display:none;position:absolute;top:-5px;right:-9px;background:#FF0000;color:#fff;border-radius:50%;width:16px;height:16px;font-size:9px;font-weight:700;align-items:center;justify-content:center;line-height:16px;text-align:center;border:1px solid #fff;">0</span>
         </div>
       </div>
@@ -541,134 +548,43 @@ window.PRODUCT_CHEMICAL_IMG_IMG_PROD_FIS_MR_1   = "https://raw.githubusercontent
 </div>
 
 <script>
-// ── Bump Nav animation ──
+// ── Nav (no bump, color-only active state) ──
 const NAV_TABS=['pr','fav','cmp','soc','fortune'];
-const NAV_COUNT=NAV_TABS.length;
-const NAV_W=390;
 let _activeNavTab='pr';
 
-function getNavW(){
-  const navBar=document.getElementById('nav-bar');
-  return navBar ? navBar.offsetWidth : NAV_W;
-}
-
-function getBumpPath(activeIdx){
-  const W=getNavW();
-  const tw=W/NAV_COUNT;
-  const cx=tw*activeIdx+tw/2;
-  const bumpW=tw*1.6;
-  const bumpH=14;
-  const topY=8;
-  const l1=cx-bumpW*0.55, l2=cx-bumpW*0.22;
-  const r1=cx+bumpW*0.22, r2=cx+bumpW*0.55;
-  return `M0,${topY} L${l1},${topY} C${l2},${topY} ${cx-bumpW*0.12},${topY-bumpH} ${cx},${topY-bumpH} C${cx+bumpW*0.12},${topY-bumpH} ${r1},${topY} ${r2},${topY} L${W},${topY} L${W},64 L0,64 Z`;
-}
-function getBorderPath(activeIdx){
-  const W=getNavW();
-  const tw=W/NAV_COUNT;
-  const cx=tw*activeIdx+tw/2;
-  const bumpW=tw*1.6;
-  const bumpH=14;
-  const topY=8;
-  const l1=cx-bumpW*0.55, l2=cx-bumpW*0.22;
-  const r1=cx+bumpW*0.22, r2=cx+bumpW*0.55;
-  return `M0,${topY} L${l1},${topY} C${l2},${topY} ${cx-bumpW*0.12},${topY-bumpH} ${cx},${topY-bumpH} C${cx+bumpW*0.12},${topY-bumpH} ${r1},${topY} ${r2},${topY} L${W},${topY}`;
-}
-
-// Smooth path morphing via requestAnimationFrame
-let _morphRaf=null,_morphFrom=null,_morphTo=null,_morphT=0;
-function parsePath(d){
-  // extract all numbers for interpolation
-  return d.match(/-?[\d.]+/g).map(Number);
-}
-function buildPath(template,nums){
-  let i=0;
-  return template.replace(/-?[\d.]+/g,()=>nums[i++].toFixed(2));
-}
-function morphPath(fromPath,toPath,dur,onUpdate,onDone){
-  if(_morphRaf)cancelAnimationFrame(_morphRaf);
-  const fromNums=parsePath(fromPath);
-  const toNums=parsePath(toPath);
-  const start=performance.now();
-  function step(now){
-    const t=Math.min((now-start)/dur,1);
-    // ease in-out cubic
-    const e=t<0.5?4*t*t*t:(t-1)*(2*t-2)*(2*t-2)+1;
-    const interp=fromNums.map((f,i)=>f+(toNums[i]-f)*e);
-    onUpdate(buildPath(fromPath,interp));
-    if(t<1)_morphRaf=requestAnimationFrame(step);
-    else{onUpdate(toPath);if(onDone)onDone();}
-  }
-  _morphRaf=requestAnimationFrame(step);
-}
-
-function animateBumpTo(newIdx){
-  const bgPath=$('nav-bg-path');
-  const bdPath=$('nav-border-path');
-  if(!bgPath||!bdPath)return;
-  const fromBg=bgPath.getAttribute('d');
-  const fromBd=bdPath.getAttribute('d');
-  const toBg=getBumpPath(newIdx);
-  const toBd=getBorderPath(newIdx);
-  morphPath(fromBg,toBg,320,d=>bgPath.setAttribute('d',d));
-  morphPath(fromBd,toBd,320,d=>bdPath.setAttribute('d',d));
-}
-
 function setNavActive(tab){
-  const newIdx=NAV_TABS.indexOf(tab);
-  const oldIdx=NAV_TABS.indexOf(_activeNavTab);
-
-  // animate SVG bump
-  if(newIdx!==oldIdx) animateBumpTo(newIdx);
   _activeNavTab=tab;
-
-  NAV_TABS.forEach((x,i)=>{
-    const wrap=$('ni-'+x+'-wrap');
+  const activeFilter='invert(18%) sepia(100%) saturate(7000%) hue-rotate(0deg) brightness(90%) contrast(120%)';
+  const inactiveFilter='grayscale(1) opacity(0.35)';
+  NAV_TABS.forEach(x=>{
     const lbl=$('nav-'+x);
     const isActive=x===tab;
     const c=isActive?'#FF0000':'#ccc';
-
-    // icon wrap bump animation
-    if(wrap){
-      wrap.classList.remove('anim-in','anim-out','bumped');
-      void wrap.offsetWidth;
-    }
-
     if(lbl)lbl.style.color=c;
-
-    // color the icon
     if(x==='cmp'){
       const img=$('ni-cmp-img');
-      if(img){
-        img.style.opacity=isActive?'1':'0.35';
-        img.style.filter=isActive?'invert(18%) sepia(100%) saturate(7000%) hue-rotate(0deg) brightness(100%) contrast(100%)':'grayscale(1)';
-      }
+      if(img)img.style.filter=isActive?activeFilter:inactiveFilter;
     } else {
       const svgEl=$(x==='pr'?'ni-pr-svg':x==='fav'?'ni-fav-svg':x==='soc'?'ni-soc-svg':'ni-fortune-svg');
       if(svgEl)svgEl.setAttribute('stroke',c);
     }
   });
+  // Show/hide rotate popup when Compare is active and in portrait
+  const popup=$('rotate-popup');
+  if(popup){
+    const isCompare=(tab==='cmp');
+    const isPortrait=window.innerHeight>window.innerWidth;
+    popup.style.display=(isCompare&&isPortrait)?'block':'none';
+  }
 }
 
-// Init bump at Products (index 0)
-(function(){
-  const bgPath=$('nav-bg-path');
-  const bdPath=$('nav-border-path');
-  if(bgPath)bgPath.setAttribute('d',getBumpPath(0));
-  if(bdPath)bdPath.setAttribute('d',getBorderPath(0));
-})();
-
-// Redraw nav SVG on orientation change / resize
-window.addEventListener('resize', function(){
-  const bgPath=$('nav-bg-path');
-  const bdPath=$('nav-border-path');
-  const idx=NAV_TABS.indexOf(_activeNavTab);
-  if(bgPath)bgPath.setAttribute('d',getBumpPath(idx));
-  if(bdPath)bdPath.setAttribute('d',getBorderPath(idx));
-  // also update nav SVG viewBox
-  const svg=document.getElementById('nav-bg-svg');
-  const W=getNavW();
-  if(svg)svg.setAttribute('viewBox','0 0 '+W+' 64');
+// Hide rotate popup on orientation change to landscape
+window.addEventListener('resize',function(){
+  const popup=$('rotate-popup');
+  if(popup&&_activeNavTab==='cmp'){
+    const isPortrait=window.innerHeight>window.innerWidth;
+    popup.style.display=isPortrait?'block':'none';
+  }
 });
 </script>
 
@@ -923,12 +839,207 @@ const HDR_CFG={
   fortune:{title:'hdrFortune',back:false,logo:false}
 };
 
+// ── Colorcode Instruction Info – Carousel Modal ──
+(function(){
+  // ── COLORCODE images: hardcoded in order RED, GREEN, YELLOW, BLUE, GRAY, ORANGE, PINK ──
+  const BASE_URL = 'https://raw.githubusercontent.com/fischerSoutheastAsia/easyguide-preview/main/image/COLORCODE/';
+  const COLORCODE_IMAGES = [
+    { file: 'RED_FRONTPAGE.png',  label: 'RED'    },
+    { file: 'GREEN_ALL.png',      label: 'GREEN'  },
+    { file: 'YELLOW_MASONRY.png', label: 'YELLOW' },
+    { file: 'BLUE_CAVITY.png',    label: 'BLUE'   },
+    { file: 'GREY_CONCRETE.png',  label: 'GRAY'   },
+    { file: 'ORANGE_M%26E.png',   label: 'ORANGE' },
+    { file: 'PINK_NTJH.png',      label: 'PINK'   },
+  ];
+
+  let _ccIdx = 0;
+  let _ccTouch = {x:0, active:false};
+
+  function loadColorcodeImages(){
+    return Promise.resolve(COLORCODE_IMAGES.map(function(item){
+      return BASE_URL + item.file;
+    }));
+  }
+
+  function buildModal(imgs){
+    var existing = document.getElementById('cc-modal');
+    if(existing) existing.remove();
+
+    _ccIdx = 0;
+    var total = imgs.length;
+    var _animating = false;
+
+    // ── Modal overlay ──
+    var modal = document.createElement('div');
+    modal.id = 'cc-modal';
+    modal.style.cssText = 'position:absolute;top:0;left:0;right:0;bottom:0;z-index:500;display:flex;align-items:center;justify-content:center;background:rgba(0,0,0,0.62);backdrop-filter:blur(2px);-webkit-backdrop-filter:blur(2px);';
+    modal.addEventListener('click', function(e){ if(e.target===modal) closeModal(); });
+
+    // ── Dimensions ──
+    var CLOSE_GAP = 10; // gap between close button and card top
+    var CLOSE_H = 28;
+    var CARD_W = 304;
+    var CARD_H = 456;
+
+    // ── Outer wrapper: [prevArrow] [cardWrap] [nextArrow] ──
+    var outerRow = document.createElement('div');
+    outerRow.style.cssText = 'display:flex;flex-direction:row;align-items:center;gap:8px;';
+
+    // cardWrap: padding-top creates gap between × button and card
+    var cardWrap = document.createElement('div');
+    cardWrap.style.cssText = 'position:relative;flex-shrink:0;padding-top:'+(CLOSE_H+CLOSE_GAP)+'px;';
+
+    // ── Close button – above card right edge with a gap ──
+    var closeBtn = document.createElement('button');
+    closeBtn.innerHTML = '<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.5" stroke-linecap="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>';
+    closeBtn.style.cssText = 'position:absolute;top:0;right:0;z-index:20;background:rgba(0,0,0,0.55);border:none;cursor:pointer;border-radius:50%;width:'+CLOSE_H+'px;height:'+CLOSE_H+'px;display:flex;align-items:center;justify-content:center;padding:0;';
+    closeBtn.addEventListener('click', function(e){ e.stopPropagation(); closeModal(); });
+
+    var card = document.createElement('div');
+    // border-radius:0 = 90° sharp corners
+    card.style.cssText = 'position:relative;width:'+CARD_W+'px;background:#fff;border-radius:0;overflow:hidden;box-shadow:0 8px 32px rgba(0,0,0,0.4);display:flex;flex-direction:column;flex-shrink:0;';
+
+    // ── Slide track – infinite loop using cloned bookend slides ──
+    // Layout: [clone_last] [img0] [img1] ... [imgN-1] [clone_first]
+    var viewport = document.createElement('div');
+    viewport.style.cssText = 'width:'+CARD_W+'px;height:'+CARD_H+'px;overflow:hidden;position:relative;flex-shrink:0;';
+
+    var loopTotal = total + 2; // bookends
+    var track = document.createElement('div');
+    // translate3d instead of translateX — forces GPU compositing on a dedicated layer,
+    // which prevents the subpixel bleed that translateX causes on non-1x DPI screens
+    track.style.cssText = 'position:absolute;top:0;left:0;display:flex;flex-direction:row;width:'+(CARD_W*loopTotal)+'px;height:'+CARD_H+'px;transform:translate3d(-'+CARD_W+'px,0,0);transition:transform 0.32s cubic-bezier(0.4,0,0.2,1);';
+
+    function makeSlide(src){
+      var slide = document.createElement('div');
+      slide.style.cssText = 'width:'+CARD_W+'px;height:'+CARD_H+'px;flex-shrink:0;position:relative;overflow:hidden;';
+      var img = document.createElement('img');
+      // Integer px dimensions — avoids any fractional sizing from percentage calc
+      img.style.cssText = 'position:absolute;top:0;left:0;width:'+CARD_W+'px;height:'+CARD_H+'px;display:block;border:0;padding:0;margin:0;';
+      img.src = src;
+      img.onerror = function(){ this.src='data:image/svg+xml,'+encodeURIComponent('<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="1620"><rect width="1080" height="1620" fill="#E4E3DF"/></svg>'); };
+      slide.appendChild(img);
+      return slide;
+    }
+
+    // clone_last (bookend before)
+    track.appendChild(makeSlide(imgs[total-1]));
+    // real slides
+    for(var s=0; s<total; s++) track.appendChild(makeSlide(imgs[s]));
+    // clone_first (bookend after)
+    track.appendChild(makeSlide(imgs[0]));
+    viewport.appendChild(track);
+
+    var _transitioning = false;
+    function goTo(i, skipAnim){
+      i = ((i % total) + total) % total;
+      _ccIdx = i;
+      var trackPos = i + 1;
+      track.style.transition = skipAnim ? 'none' : 'transform 0.32s cubic-bezier(0.4,0,0.2,1)';
+      track.style.transform = 'translate3d(-'+(CARD_W*trackPos)+'px,0,0)';
+      updateDots();
+    }
+
+    track.addEventListener('transitionend', function(e){
+      if(e.propertyName !== 'transform') return;
+      var match = track.style.transform.match(/translate3d\(\s*(-?[\d.]+)px/);
+      if(!match) return;
+      var curPos = Math.round(-parseFloat(match[1]) / CARD_W);
+      if(curPos === 0){
+        track.style.transition = 'none';
+        track.style.transform = 'translate3d(-'+(CARD_W*total)+'px,0,0)';
+      } else if(curPos === loopTotal-1){
+        track.style.transition = 'none';
+        track.style.transform = 'translate3d(-'+CARD_W+'px,0,0)';
+      }
+    });
+
+    // ── Prev / Next arrows – outside card, no background circle ──
+    function arrowBtn(dir){
+      var b = document.createElement('button');
+      b.style.cssText = 'background:none;border:none;cursor:pointer;padding:6px;flex-shrink:0;display:flex;align-items:center;justify-content:center;';
+      b.innerHTML = dir==='prev'
+        ? '<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,0.9)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M15 18l-6-6 6-6"/></svg>'
+        : '<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,0.9)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18l6-6-6-6"/></svg>';
+      b.addEventListener('click', function(e){ e.stopPropagation(); goTo(dir==='prev'?_ccIdx-1:_ccIdx+1); });
+      return b;
+    }
+    var prevBtn = arrowBtn('prev');
+    var nextBtn = arrowBtn('next');
+
+    // ── Touch swipe ──
+    viewport.addEventListener('touchstart', function(e){
+      _ccTouch.x = e.touches[0].clientX;
+      _ccTouch.active = true;
+    }, {passive:true});
+    viewport.addEventListener('touchend', function(e){
+      if(!_ccTouch.active) return;
+      var dx = _ccTouch.x - e.changedTouches[0].clientX;
+      _ccTouch.active = false;
+      if(Math.abs(dx)>40) goTo(dx>0?_ccIdx+1:_ccIdx-1);
+    }, {passive:true});
+
+    // ── Dots – more vertical padding ──
+    var dotsRow = document.createElement('div');
+    dotsRow.style.cssText = 'display:flex;justify-content:center;align-items:center;gap:8px;padding:16px 8px 14px;background:#fff;flex-shrink:0;';
+    var dotEls = [];
+    for(var d=0; d<total; d++){
+      var dot = document.createElement('div');
+      dot.style.cssText = 'width:7px;height:7px;border-radius:50%;background:rgba(0,0,0,0.18);transition:background 0.2s;flex-shrink:0;cursor:pointer;';
+      (function(idx){ dot.addEventListener('click', function(e){ e.stopPropagation(); goTo(idx); }); })(d);
+      dotEls.push(dot);
+      dotsRow.appendChild(dot);
+    }
+
+    function updateDots(){
+      dotEls.forEach(function(d,i){ d.style.background = i===_ccIdx?'#FF0000':'rgba(0,0,0,0.18)'; });
+    }
+    updateDots();
+
+    // ── Assemble ──
+    card.appendChild(viewport);
+    card.appendChild(dotsRow);
+    cardWrap.appendChild(closeBtn);
+    cardWrap.appendChild(card);
+    outerRow.appendChild(prevBtn);
+    outerRow.appendChild(cardWrap);
+    outerRow.appendChild(nextBtn);
+    modal.appendChild(outerRow);
+    return modal;
+  }
+
+  function closeModal(){
+    const m = document.getElementById('cc-modal');
+    if(m){ m.style.opacity='0'; m.style.transition='opacity 0.18s'; setTimeout(()=>m.remove(), 200); }
+  }
+
+  window.showColorCodeInfo = function(){
+    const app = document.getElementById('APP');
+    if(!app) return;
+
+    loadColorcodeImages().then(function(imgs){
+      const existing = document.getElementById('cc-modal');
+      if(existing) existing.remove();
+
+      const modal = buildModal(imgs);
+      modal.style.opacity = '0';
+      modal.style.transition = 'opacity 0.2s';
+      app.appendChild(modal);
+      requestAnimationFrame(function(){ modal.style.opacity='1'; });
+    });
+  };
+})();
+
 function updateHdr(id,customTitle){
   const cfg=HDR_CFG[id];
   const backBtn=$('hdr-back'),logo=$('hdr-logo'),titleEl=$('hdr-title'),lpBtn=$('lp');
+  const infoBtn=$('hdr-info-btn');
   if(!cfg){backBtn.style.display='none';logo.style.display='flex';titleEl.style.display='none';return;}
   backBtn.style.display=cfg.back?'flex':'none';
   lpBtn.style.visibility=(id==='lang')?'hidden':'visible';
+  // Show Info button only on product list panel
+  if(infoBtn){infoBtn.style.display=(id==='pl')?'flex':'none';}
   if(cfg.logo){logo.style.display='flex';titleEl.style.display='none';}
   else{logo.style.display='none';titleEl.style.display='block';
     if(cfg.det&&CDP){titleEl.textContent=CDP.name;}
@@ -1033,7 +1144,24 @@ const starFilledBig=`<svg width="20" height="20" viewBox="0 0 24 24" fill="#f5c5
 const starEmptyBig=`<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#ccc" stroke-width="2.5" stroke-linecap="square" stroke-linejoin="miter"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>`;
 
 // ── COMPARE SVG ICONS ──
-const scaleIcon=(active,small)=>{const s=small?18:20;const c=active?'#f5c518':'#ccc';return `<svg width="${s}" height="${s}" viewBox="0 0 24 24" fill="none" stroke="${c}" stroke-width="2.5" stroke-linecap="square" stroke-linejoin="miter"><path d="M12 3v18M5 8l-3 5h6L5 8zM19 8l-3 5h6L19 8z"/><line x1="5" y1="21" x2="19" y2="21"/></svg>`;};
+const COMPARE_ICON_SRC=()=>window.ICON_COMPARE_IMG_ICON_COMPARE_SCALE||'';
+const scaleIcon=(active,small)=>{
+  const s=small?24:28;
+  const src=COMPARE_ICON_SRC();
+  const activeFilter='invert(18%) sepia(100%) saturate(7000%) hue-rotate(0deg) brightness(90%) contrast(120%)';
+  const inactiveFilter='grayscale(1) opacity(0.35)';
+  return `<img src="${src}" width="${s}" height="${s}" style="display:block;object-fit:contain;filter:${active?activeFilter:inactiveFilter};transition:filter 0.15s;" onerror="this.style.display='none'">`;
+};
+
+// Set nav compare icon src
+(function(){
+  function _initCmpNav(){
+    const img=document.getElementById('ni-cmp-img');
+    if(img)img.src=window.ICON_COMPARE_IMG_ICON_COMPARE_SCALE||'';
+  }
+  if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',_initCmpNav);
+  else _initCmpNav();
+})();
 
 let CMP=new Set(); // Compare set (max 2)
 
@@ -1043,7 +1171,7 @@ function tCmpBtn(e,name,btn){
     CMP.delete(name);
     btn.innerHTML=scaleIcon(false,true);
   } else {
-    if(CMP.size>=3){
+    if(CMP.size>=5){
       return;
     }
     CMP.add(name);
@@ -1060,7 +1188,7 @@ function tCmpBtnDet(name,btn){
   if(CMP.has(name)){
     CMP.delete(name);btn.innerHTML=scaleIcon(false,false);
   } else {
-    if(CMP.size>=3){btn.style.opacity='0.3';setTimeout(()=>btn.style.opacity='1',300);return;}
+    if(CMP.size>=5){btn.style.opacity='0.3';setTimeout(()=>btn.style.opacity='1',300);return;}
     CMP.add(name);btn.innerHTML=scaleIcon(true,false);spawnSparkle(btn);
   }
   updCmpBadge();
@@ -1089,63 +1217,74 @@ function rCmp(){
     return;
   }
 
-  // ── comparison table ──
   const SPEC_KEYS=[
-    {key:'cat',   label:'Category'},
-    {key:'mats',  label:T.matLbl||'Base materials'},
-    {key:'ETA',   label:T.etaLbl||'ETA Approved'},
-    {key:'fire',  label:T.fireLbl||'Fire resistance'},
-    {key:'life',  label:T.lifeLbl||'Service life'},
-    {key:'seis',  label:T.seisLbl||'Seismic C2'},
-    {key:'wk',    label:T.wkLbl||'Working time'},
-    {key:'cu',    label:T.cuLbl||'Curing time'},
+    {key:'cat',  label:'Category'},
+    {key:'mats', label:T.matLbl||'Base materials'},
+    {key:'ETA',  label:T.etaLbl||'ETA Approved'},
+    {key:'fire', label:T.fireLbl||'Fire resistance'},
+    {key:'life', label:T.lifeLbl||'Service life'},
+    {key:'seis', label:T.seisLbl||'Seismic C2'},
+    {key:'wk',   label:T.wkLbl||'Working time'},
+    {key:'cu',   label:T.cuLbl||'Curing time'},
   ];
 
-  // header row with product name + image
-  let hdrCols=list.map(p=>{
-    const iconSrc=getProductIcon(p.name)||p.imgs[0];
-    return `<td style="text-align:center;padding:12px 8px 8px;vertical-align:top;width:${list.length===1?'60%':list.length===2?'50%':'33%'};">
-      <div style="width:56px;height:56px;margin:0 auto 8px;overflow:hidden;cursor:pointer;" onclick="sD('${p.name}')">
-        <img src="${iconSrc}" style="width:56px;height:56px;object-fit:cover;display:block;" onerror="this.style.display='none'">
+  const LABEL_W = 90;
+  const COL_W   = 86;
+  const totalW  = LABEL_W + COL_W * list.length;
+
+  // Product header cells
+  const hdrCells = list.map(p => {
+    const iconSrc = getProductIcon(p.name) || p.imgs[0];
+    return `<div style="width:${COL_W}px;flex-shrink:0;text-align:center;padding:10px 4px 8px;box-sizing:border-box;">
+      <div style="width:46px;height:46px;margin:0 auto 5px;overflow:hidden;cursor:pointer;" onclick="sD('${p.name}')">
+        <img src="${iconSrc}" style="width:46px;height:46px;object-fit:cover;display:block;" onerror="this.style.display='none'">
       </div>
-      <div style="font-size:13px;font-weight:700;color:#1a1a1a;cursor:pointer;" onclick="sD('${p.name}')">${p.name}</div>
-      <button style="background:none;border:none;cursor:pointer;padding:3px;margin-top:4px;" onclick="removeCmp('${p.name}')">
-        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#bbb" stroke-width="2.5" stroke-linecap="square"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
-      </button>
-    </td>`;
+      <div style="font-size:10px;font-weight:700;color:#1a1a1a;line-height:1.3;cursor:pointer;word-break:break-word;" onclick="sD('${p.name}')">${p.name}</div>
+    </div>`;
   }).join('');
-  if(list.length===1) hdrCols+=`<td style="text-align:center;padding:12px 8px;color:#DDD9D4;vertical-align:middle;"><div style="font-size:11px;color:#bbb;line-height:1.4;">Add a<br>2nd product</div></td><td style="text-align:center;padding:12px 8px;color:#DDD9D4;vertical-align:middle;"><div style="font-size:11px;color:#bbb;line-height:1.4;">Add a<br>3rd product</div></td>`;
-  if(list.length===2) hdrCols+=`<td style="text-align:center;padding:12px 8px;color:#DDD9D4;vertical-align:middle;"><div style="font-size:11px;color:#bbb;line-height:1.4;">Add a<br>3rd product</div></td>`;
 
-  let tableRows=SPEC_KEYS.map(spec=>{
-    const vals=list.map(p=>{
-      let v='—';
-      if(spec.key==='mats') v=p.mats&&p.mats.length?p.mats.join(', '):'—';
-      else if(spec.key==='ETA') v=p.ETA?'<span style="color:#FF0000;font-weight:700;">✓</span>':'—';
-      else if(spec.key==='fire') v=p.fire?`<span style="color:#FF0000;font-weight:700;">${p.fR}</span>`:'—';
-      else if(spec.key==='life') v=p.life?`<span style="color:#FF0000;font-weight:700;">${p.lY}</span>`:'—';
-      else if(spec.key==='seis') v=p.seis?'<span style="color:#FF0000;font-weight:700;">✓</span>':'—';
-      else if(spec.key==='wk') v=p.wk||'—';
-      else if(spec.key==='cu') v=p.cu||'—';
-      else if(spec.key==='cat') v=p.cat||'—';
-      return `<td style="text-align:center;padding:7px 6px;font-size:12px;font-weight:500;color:#1a1a1a;border-bottom:1px solid #f5f5f5;vertical-align:top;">${v}</td>`;
+  // Data rows
+  const dataRows = SPEC_KEYS.map((spec, rowIdx) => {
+    const isEven  = rowIdx % 2 === 0;
+    const rowBg   = isEven ? '#ffffff' : '#F6F4F3';
+
+    const cells = list.map(p => {
+      let v = '—';
+      if(spec.key==='mats') v = p.mats&&p.mats.length ? p.mats.join(', ') : '—';
+      else if(spec.key==='ETA')  v = p.ETA  ? '<span style="color:#FF0000;font-weight:700;">✓</span>' : '—';
+      else if(spec.key==='fire') v = p.fire  ? `<span style="color:#FF0000;font-weight:700;">${p.fR}</span>` : '—';
+      else if(spec.key==='life') v = p.life  ? `<span style="color:#FF0000;font-weight:700;">${p.lY}</span>` : '—';
+      else if(spec.key==='seis') v = p.seis  ? '<span style="color:#FF0000;font-weight:700;">✓</span>' : '—';
+      else if(spec.key==='wk')   v = p.wk  || '—';
+      else if(spec.key==='cu')   v = p.cu  || '—';
+      else if(spec.key==='cat')  v = p.cat || '—';
+      return `<div style="width:${COL_W}px;flex-shrink:0;text-align:center;padding:8px 4px;font-size:11px;font-weight:500;color:#1a1a1a;box-sizing:border-box;line-height:1.4;">${v}</div>`;
     }).join('');
-    const extraTd=list.length===1?`<td style="border-bottom:1px solid #f5f5f5;"></td><td style="border-bottom:1px solid #f5f5f5;"></td>`:list.length===2?`<td style="border-bottom:1px solid #f5f5f5;"></td>`:'';
-    return `<tr><td style="padding:7px 12px;font-size:11px;font-weight:500;color:#6b6b6b;border-bottom:1px solid #f5f5f5;white-space:nowrap;vertical-align:top;">${spec.label}</td>${vals}${extraTd}</tr>`;
+
+    return `<div class="cmp-row" style="display:flex;align-items:stretch;border-bottom:1px solid #dedad5;min-width:${totalW}px;">
+      <div style="width:${LABEL_W}px;min-width:${LABEL_W}px;flex-shrink:0;padding:8px 10px;font-size:11px;font-weight:600;color:#6b6b6b;background:${rowBg};position:sticky;left:0;z-index:2;display:flex;align-items:center;box-sizing:border-box;line-height:1.3;border-right:1px solid #dedad5;">${spec.label}</div>
+      <div style="display:flex;flex:1;background:${rowBg};">${cells}</div>
+    </div>`;
   }).join('');
 
-  area.innerHTML=`<div style="padding:0 12px 16px;">
-    <div style="overflow:auto;">
-      <table style="width:100%;border-collapse:collapse;">
-        <thead><tr><td style="width:30%;"></td>${hdrCols}</tr></thead>
-        <tbody>${tableRows}</tbody>
-      </table>
+  area.innerHTML=`
+    <div id="cmp-scroll" style="overflow-x:auto;overflow-y:visible;scrollbar-width:thin;scrollbar-color:#DDD9D4 transparent;">
+      <div style="min-width:${totalW}px;">
+        <!-- Sticky header row -->
+        <div class="cmp-row" style="display:flex;align-items:stretch;border-bottom:1px solid #dedad5;position:sticky;top:0;z-index:10;background:#fff;box-shadow:0 2px 6px rgba(0,0,0,0.08);min-width:${totalW}px;">
+          <div style="width:${LABEL_W}px;min-width:${LABEL_W}px;flex-shrink:0;background:#fff;position:sticky;left:0;z-index:11;border-right:1px solid #dedad5;box-sizing:border-box;"></div>
+          ${hdrCells}
+        </div>
+        <!-- Data rows -->
+        ${dataRows}
+      </div>
     </div>
-    <button class="search-again-btn" style="margin-top:12px;" onclick="clearCmp()">
-      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#6b6b6b" stroke-width="2.5" stroke-linecap="square"><polyline points="1 4 1 10 7 10"/><path d="M3.51 15a9 9 0 1 0 .49-3.56"/></svg>
-      Clear Compare
-    </button>
-  </div>`;
+    <div style="padding:12px 12px 16px;">
+      <button class="search-again-btn" onclick="clearCmp()">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#6b6b6b" stroke-width="2.5" stroke-linecap="square"><polyline points="1 4 1 10 7 10"/><path d="M3.51 15a9 9 0 1 0 .49-3.56"/></svg>
+        Clear Compare
+      </button>
+    </div>`;
 }
 
 function removeCmp(name){CMP.delete(name);updCmpBadge();rCmp();// sync list buttons
@@ -1331,20 +1470,6 @@ triggerMascotAnim(document.getElementById('panel-lang'));
 updateHdr('lang');
 $('lp').style.visibility='hidden';
 
-// Initialize ICON_COMPARE assets
-(function(){
-  function initCompareAssets(){
-    var cmpImg = document.getElementById('ni-cmp-img');
-    if(cmpImg && window.ICON_COMPARE_IMG_ICON_COMPARE_SCALE){
-      cmpImg.src = window.ICON_COMPARE_IMG_ICON_COMPARE_SCALE;
-    }
-  }
-  if(document.readyState==='loading'){
-    document.addEventListener('DOMContentLoaded', initCompareAssets);
-  } else {
-    initCompareAssets();
-  }
-})();
 
 
 </script>
