@@ -1,0 +1,6 @@
+Green(#009C41): Any base material
+Yellow(#FFDD00): Solid material
+Blue(#004579): Cavity
+Grey(#524C47): Concrete
+Orange(#F38120): M&E
+Pink(#E59F9F): No-tools-just-hands
