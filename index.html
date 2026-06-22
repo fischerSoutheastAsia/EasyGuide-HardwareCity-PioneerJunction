@@ -95,6 +95,8 @@ body{background:#BDBAB0;display:flex;justify-content:center;align-items:flex-sta
   #APP.landscape-cmp #nav-bar { display: none !important; }
   #APP.landscape-cmp .cmp-clear-area { display: none !important; }
   #APP.landscape-cmp #slide-container { height: 100dvh !important; }
+  #APP.landscape-cmp #panel-cmp { padding-bottom: 0 !important; top: 0 !important; }
+  #APP.landscape-cmp #cmp-scroll { height: 100dvh !important; overflow-y: auto !important; }
 }
 .lang-zh *{font-family:'Noto Sans SC',sans-serif !important;font-weight:500;}
 .lang-zh #eg-title{font-family:'Montserrat',sans-serif !important;font-weight:800 !important;}
@@ -1232,8 +1234,18 @@ function updFavBadge(){const b=$('fav-badge');if(FAV.size>0){const prev=b.textCo
 function _updateLandscapeCmp(){
   const app=$('APP');
   const isLand=window.innerWidth>window.innerHeight&&window.innerHeight<600;
-  if(CUR==='cmp'&&isLand){app.classList.add('landscape-cmp');}
-  else{app.classList.remove('landscape-cmp');}
+  if(CUR==='cmp'&&isLand){
+    app.classList.add('landscape-cmp');
+    // Reset scroll to top to prevent white space
+    requestAnimationFrame(()=>{
+      const panel=$('panel-cmp');
+      const scroll=$('cmp-scroll');
+      if(panel) panel.scrollTop=0;
+      if(scroll) scroll.scrollTop=0;
+    });
+  } else {
+    app.classList.remove('landscape-cmp');
+  }
 }
 
 window.addEventListener('resize',function(){
@@ -1337,6 +1349,13 @@ function rCmp(){
   const area=$('cmp-c');area.innerHTML='';
   const T=t();
   const list=[...CMP].map(n=>PD.find(p=>p.name===n)).filter(Boolean);
+  // Reset scroll position before rendering
+  requestAnimationFrame(()=>{
+    const panel=$('panel-cmp');
+    const scroll=$('cmp-scroll');
+    if(panel) panel.scrollTop=0;
+    if(scroll) scroll.scrollTop=0;
+  });
 
   if(!list.length){
     area.innerHTML=`<div style="display:flex;flex-direction:column;align-items:center;justify-content:center;padding:60px 20px;text-align:center;color:#aaa;line-height:1.7;">
