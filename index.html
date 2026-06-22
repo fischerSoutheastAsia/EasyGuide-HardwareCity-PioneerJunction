@@ -587,7 +587,7 @@ window.PRODUCT_CHEMICAL_IMG_IMG_PROD_FIS_MR_1   = "https://raw.githubusercontent
     <!-- Fortune -->
     <button class="ni" id="ni-fortune" onclick="nC('fortune')">
       <div class="ni-icon-wrap" id="ni-fortune-wrap">
-        <img id="ni-fortune-img" src="https://raw.githubusercontent.com/fischerSoutheastAsia/easyguide-preview/main/image/ICON/MENU_FORTUNE.svg" width="56" height="56" style="display:block;object-fit:contain;" alt="Fortune">
+        <img id="ni-fortune-img" src="https://raw.githubusercontent.com/fischerSoutheastAsia/easyguide-preview/main/image/ICON/MENU_FORTUNE.svg?v=3" width="56" height="56" style="display:block;object-fit:contain;" alt="Fortune">
       </div>
       <span class="nav-label" style="color:#ccc;" id="nav-fortune">Fortune</span>
     </button>
@@ -1391,6 +1391,7 @@ function rCmp(){
 
   const SPEC_KEYS=[
     {key:'cat',  label:'Category'},
+    {key:'type', label:T.typeLbl||'Type'},
     {key:'mats', label:T.matLbl||'Base materials'},
     {key:'ETA',  label:T.etaLbl||'ETA Approved'},
     {key:'fire', label:T.fireLbl||'Fire resistance'},
@@ -1429,6 +1430,7 @@ function rCmp(){
     const cells = list.map(p => {
       let v = '—';
       if(spec.key==='mats') v = p.mats&&p.mats.length ? p.mats.join(', ') : '—';
+      else if(spec.key==='type')  v = p.type || '—';
       else if(spec.key==='ETA')  v = p.ETA  ? '<span style="color:#FF0000;font-weight:700;">✓</span>' : '—';
       else if(spec.key==='fire') v = p.fire  ? `<span style="color:#FF0000;font-weight:700;">${p.fR}</span>` : '—';
       else if(spec.key==='life') v = p.life  ? `<span style="color:#FF0000;font-weight:700;">${p.lY}</span>` : '—';
