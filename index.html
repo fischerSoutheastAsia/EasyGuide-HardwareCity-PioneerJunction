@@ -155,7 +155,7 @@ body{background:#BDBAB0;display:flex;justify-content:center;align-items:flex-sta
 #det-slider-box,#car-wrap,#car-track{width:100% !important;max-width:100% !important;}
 #car-track>div{flex:0 0 100% !important;width:100% !important;min-width:0 !important;}
 #car-track>div img{width:100% !important;aspect-ratio:780/439;object-fit:cover !important;display:block;}
-.slide-panel{position:absolute;top:0;left:0;right:0;bottom:0;display:flex;flex-direction:column;overflow-y:auto;overflow-x:hidden;padding-bottom:65px;transition:transform 0.32s cubic-bezier(0.4,0,0.2,1);will-change:transform;scrollbar-width:none;}
+.slide-panel{position:absolute;top:0;left:0;right:0;bottom:0;display:flex;flex-direction:column;overflow-y:auto;overflow-x:hidden;padding-bottom:65px;transition:transform 0.32s cubic-bezier(0.4,0,0.2,1);will-change:transform;scrollbar-width:none;-webkit-overflow-scrolling:touch;}
 .slide-panel::-webkit-scrollbar{display:none;}
 .slide-panel.pos-left{transform:translateX(-100%);}
 .slide-panel.pos-center{transform:translateX(0);}
@@ -163,8 +163,6 @@ body{background:#BDBAB0;display:flex;justify-content:center;align-items:flex-sta
 @keyframes mascotPop{0%{transform:translateY(20px);opacity:0;}60%{transform:translateY(-8px);opacity:1;}80%{transform:translateY(3px);}100%{transform:translateY(0);}}
 @keyframes speechFade{0%{opacity:0;transform:translateY(6px);}100%{opacity:1;transform:translateY(0);}}
 @keyframes badgePop{0%{transform:scale(1);}40%{transform:scale(1.45);}70%{transform:scale(0.9);}100%{transform:scale(1);}}
-@keyframes infoHeartbeat{0%{transform:scale(1);}14%{transform:scale(1.3);}28%{transform:scale(1.1);}42%{transform:scale(1.25);}70%{transform:scale(1);}100%{transform:scale(1);}}
-.info-heartbeat{animation:infoHeartbeat 0.6s ease-in-out!important;}
 .mascot-anim{animation:mascotPop 0.55s ease forwards;}
 .speech-anim{animation:speechFade 0.4s ease 0.3s forwards;opacity:0;}
 @keyframes omikujiShake{0%{transform:rotate(0deg);}15%{transform:rotate(-8deg);}30%{transform:rotate(8deg);}45%{transform:rotate(-6deg);}60%{transform:rotate(6deg);}75%{transform:rotate(-3deg);}90%{transform:rotate(3deg);}100%{transform:rotate(0deg);}}
@@ -216,9 +214,6 @@ window.PRODUCT_CHEMICAL_IMG_IMG_PROD_FIS_MR_1   = "https://raw.githubusercontent
   </div>
   <div id="hdr-title" style="font-family:'Inter',sans-serif;font-weight:700;font-size:15px;color:#1a1a1a;display:none;position:absolute;left:0;right:0;text-align:center;pointer-events:none;z-index:1;"></div>
   <div style="display:flex;align-items:center;gap:0px;position:relative;z-index:2;margin-left:auto;">
-    <button id="hdr-info-btn" onclick="showColorCodeInfo()" style="background:none;border:none;cursor:pointer;padding:4px;color:#1a1a1a;display:none;align-items:center;justify-content:center;width:36px;height:36px;box-sizing:border-box;">
-      <img id="hdr-info-img" src="https://raw.githubusercontent.com/fischerSoutheastAsia/easyguide-preview/main/image/ICON/INFO.svg" style="width:27px;height:27px;display:block;position:relative;top:-1px;filter:invert(18%) sepia(100%) saturate(7000%) hue-rotate(0deg) brightness(90%) contrast(120%);" alt="Info">
-    </button>
     <button id="lp" onclick="gL()" style="background:none;border:none;cursor:pointer;padding:4px;color:#1a1a1a;display:flex;align-items:center;justify-content:center;width:36px;height:36px;box-sizing:border-box;">
       <img src="https://raw.githubusercontent.com/fischerSoutheastAsia/easyguide-preview/main/image/ICON/GLOBE.svg" style="width:27px;height:27px;display:block;" alt="Language">
     </button>
@@ -370,7 +365,7 @@ window.PRODUCT_CHEMICAL_IMG_IMG_PROD_FIS_MR_1   = "https://raw.githubusercontent
         <div style="flex:1;text-align:left;"><div style="font-size:15px;font-weight:300;color:#1a1a1a;" id="c3">Steel Fixings</div></div>
         <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="#ccc" stroke-width="2.5" stroke-linecap="square" stroke-linejoin="miter" style="flex-shrink:0;"><path d="M9 18l6-6-6-6"/></svg>
       </button>
-      <button class="list-row" onclick="fC('No-Tools-Just-Hand for DIY')">
+      <button class="list-row" onclick="fC('No Tools Just Hands')">
         <div style="width:64px;height:64px;flex-shrink:0;overflow:hidden;margin-right:14px;"><img src="https://raw.githubusercontent.com/fischerSoutheastAsia/easyguide-preview/main/image/ICON_CAT/IMG_ICON_NTJH.webp" style="width:64px;height:64px;object-fit:cover;display:block;"></div>
         <div style="flex:1;text-align:left;"><div style="font-size:15px;font-weight:300;color:#1a1a1a;" id="c4">No Tools Just Hands</div></div>
         <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="#ccc" stroke-width="2.5" stroke-linecap="square" stroke-linejoin="miter" style="flex-shrink:0;"><path d="M9 18l6-6-6-6"/></svg>
@@ -422,7 +417,7 @@ window.PRODUCT_CHEMICAL_IMG_IMG_PROD_FIS_MR_1   = "https://raw.githubusercontent
         <div style="font-family:'Varela Round',sans-serif;font-size:13px;color:#1a1a1a;line-height:1.55;" id="pl-sp" class="speech-anim">Here are the matching products.</div>
       </div>
     </div>
-    <div style="padding:0 0 20px;display:flex;flex-direction:column;" id="pl-c"></div>
+    <div style="padding:0 0 20px;display:flex;flex-direction:column;flex:1;" id="pl-c"></div>
   </div>
 
   <!-- DETAIL PANEL -->
@@ -783,14 +778,14 @@ const PD=[
   {name:"FBN II",colorLabels:["grey"],tag:"",cat:"Steel fixing",type:"",mats:["Non-cracked concrete","Cracked concrete"],ETA:1,life:0,fire:0,seis:0,fR:"",lY:"",wk:"",cu:"",features:[],imgs:["https://raw.githubusercontent.com/fischerSoutheastAsia/easyguide-preview/main/image/PROD_METAL/IMG_PROD_FBN_1.webp","https://raw.githubusercontent.com/fischerSoutheastAsia/easyguide-preview/main/image/PROD_METAL/IMG_PROD_FBN_2.webp"],loadUrl:"https://fiproductmedia.azureedge.net/media/Load%20Tables/Load%20Tables%20fischer/LT_FBN-II_EN_T1.pdf",vidUrl:null,vidThumb:null,webUrl:"https://www.fischer.sg/en-sg/products/steel-fixings/bolt-anchor/bolt-anchor-fbn-ii/bolt-anchor-fbn-ii",accessories:null},
   {name:"FSL",colorLabels:["grey"],tag:"",cat:"Steel fixing",type:"",mats:["Non-cracked concrete"],ETA:0,life:0,fire:0,seis:0,fR:"",lY:"",wk:"",cu:"",features:["Easy to insert into the drill hole thanks to undersize","High shear loads","Removable"],imgs:["https://raw.githubusercontent.com/fischerSoutheastAsia/easyguide-preview/main/image/PROD_METAL/IMG_PROD_FSL_1.webp"],loadUrl:null,vidUrl:null,vidThumb:null,webUrl:"https://www.fischer-international.com/en/products/steel-fixings/sleeve-anchor/sleeve-anchor-fsl/sleeve-anchor-fsl",accessories:null},
   {name:"FWA",colorLabels:["grey"],tag:"",cat:"Steel fixing",type:"",mats:["Non-cracked concrete"],ETA:0,life:0,fire:0,seis:0,fR:"",lY:"",wk:"",cu:"",features:[],imgs:["https://raw.githubusercontent.com/fischerSoutheastAsia/easyguide-preview/main/image/PROD_METAL/IMG_PROD_FWA_1.webp","https://raw.githubusercontent.com/fischerSoutheastAsia/easyguide-preview/main/image/PROD_METAL/IMG_PROD_FWA_2.webp"],loadUrl:"https://fiproductmedia.azureedge.net/media/Load%20Tables/Load%20Tables%20fischer/LT_FWA_EN_T2.pdf",vidUrl:null,vidThumb:null,webUrl:"https://www.fischer.sg/en-sg/products/steel-fixings/bolt-anchor/bolt-anchor-fwa/bolt-anchor-fwa-metric",accessories:null},
-  {name:"WallHero Filler",colorLabels:["pink"],tag:"",cat:"No-Tools-Just-Hand for DIY",type:"",mats:[],ETA:0,life:0,fire:0,seis:0,fR:"",lY:"",wk:"",cu:"",features:["The repair spatula saves the wall from ugly drill holes or cracks. The strong white of the putty makes the holes disappear and can be painted over if necessary.","Penetrates deep into narrow cracks and covers them perfectly. The filler can be applied precisely with the integrated putty knife.","The filling compound is very light and shows no shrinkage with holes up to 12 mm, which avoids ugly dents in the wall."],imgs:["https://raw.githubusercontent.com/fischerSoutheastAsia/easyguide-preview/main/image/PROD_NTJH/IMG_PROD_WALLHIROFILLER_1.webp","https://raw.githubusercontent.com/fischerSoutheastAsia/easyguide-preview/main/image/PROD_NTJH/IMG_PROD_WALLHIROFILLER_2.webp","https://raw.githubusercontent.com/fischerSoutheastAsia/easyguide-preview/main/image/PROD_NTJH/IMG_PROD_WALLHIROFILLER_3.webp","https://raw.githubusercontent.com/fischerSoutheastAsia/easyguide-preview/main/image/PROD_NTJH/IMG_PROD_WALLHIROFILLER_4.webp"],loadUrl:null,vidUrl:"https://www.youtube.com/watch?v=-CwqVdUsLrs",vidThumb:null,webUrl:null,accessories:null},
-  {name:"30 seconds glue",colorLabels:["pink"],tag:"",cat:"No-Tools-Just-Hand for DIY",type:"",mats:[],ETA:0,life:0,fire:0,seis:0,fR:"",lY:"",wk:"",cu:"",features:["Bonds almost all materials, is fast and does not take longer than 30 seconds to hold (not suitable for PE, PP, PTFE).","Due to the slower reaction time, you don't stick your fingers directly to each other if you miss a drop.","Extra strong adhesion, up to 130 kg/cm² (Determined by internal testing). Max. Adhesion under ideal conditions steel on steel is achieved after 24 hours)."],imgs:["https://raw.githubusercontent.com/fischerSoutheastAsia/easyguide-preview/main/image/PROD_NTJH/IMG_PROD_30SECGLUE_1.webp","https://raw.githubusercontent.com/fischerSoutheastAsia/easyguide-preview/main/image/PROD_NTJH/IMG_PROD_30SECGLUE_2.webp","https://raw.githubusercontent.com/fischerSoutheastAsia/easyguide-preview/main/image/PROD_NTJH/IMG_PROD_30SECGLUE_3.webp","https://raw.githubusercontent.com/fischerSoutheastAsia/easyguide-preview/main/image/PROD_NTJH/IMG_PROD_30SECGLUE_4.webp"],loadUrl:null,vidUrl:"https://www.youtube.com/watch?v=i0vp8lmKKzM",vidThumb:null,webUrl:null,accessories:null},
-  {name:"2K PowerMix Universal",colorLabels:["pink"],tag:"",cat:"No-Tools-Just-Hand for DIY",type:"",mats:[],ETA:0,life:0,fire:0,seis:0,fR:"",lY:"",wk:"",cu:"",features:["For an inconspicuous repair the power adhesive is transparent. This also makes it suitable for gluing glass surfaces.","Universally applicable in many areas of application. Fast hardening time and extremely strong hold.","Weatherproof because of UV and water resistance. This ensures stable adhesion indoors and outdoors."],imgs:["https://raw.githubusercontent.com/fischerSoutheastAsia/easyguide-preview/main/image/PROD_NTJH/IMG_PROD_2KPOWERMIX_1.webp","https://raw.githubusercontent.com/fischerSoutheastAsia/easyguide-preview/main/image/PROD_NTJH/IMG_PROD_2KPOWERMIX_2.webp","https://raw.githubusercontent.com/fischerSoutheastAsia/easyguide-preview/main/image/PROD_NTJH/IMG_PROD_2KPOWERMIX_3.webp","https://raw.githubusercontent.com/fischerSoutheastAsia/easyguide-preview/main/image/PROD_NTJH/IMG_PROD_2KPOWERMIX_4.webp"],loadUrl:null,vidUrl:"https://www.youtube.com/watch?v=kgd2hsJP2AE",vidThumb:null,webUrl:null,accessories:null},
-  {name:"Fix4Panel",colorLabels:["pink"],tag:"",cat:"No-Tools-Just-Hand for DIY",type:"",mats:[],ETA:0,life:0,fire:0,seis:0,fR:"",lY:"",wk:"",cu:"",features:["High initial adhesion & flexibility","High resilience","Universally applicable to a wide range of surfaces","Elastic & vibration damping","Sufficient for an area of 1 - 2 m²"],imgs:["https://raw.githubusercontent.com/fischerSoutheastAsia/easyguide-preview/main/image/PROD_NTJH/IMG_PROD_FIX4PANEL_1.webp","https://raw.githubusercontent.com/fischerSoutheastAsia/easyguide-preview/main/image/PROD_NTJH/IMG_PROD_FIX4PANEL_2.webp"],loadUrl:null,vidUrl:null,vidThumb:null,webUrl:null,accessories:null},
-  {name:"Press2fix Hook",colorLabels:["pink"],tag:"",cat:"No-Tools-Just-Hand for DIY",type:"",mats:[],ETA:0,life:0,fire:0,seis:0,fR:"",lY:"",wk:"",cu:"",features:["No large holes through nails, plugs or screws in the wall. Simply press firmly. Attach picture. Done! And all this without tools.","Applicable in many substrates. Soft substrates such as wood, plaster and plaster are recommended.","Reusable: Remove the picture, pull the picture claw out of the wall and press it down again in another place. The solution if you want it to be quick and easy."],imgs:["https://raw.githubusercontent.com/fischerSoutheastAsia/easyguide-preview/main/image/PROD_NTJH/IMG_PROD_PRESS2FIX_1.webp","https://raw.githubusercontent.com/fischerSoutheastAsia/easyguide-preview/main/image/PROD_NTJH/IMG_PROD_PRESS2FIX_2.webp","https://raw.githubusercontent.com/fischerSoutheastAsia/easyguide-preview/main/image/PROD_NTJH/IMG_PROD_PRESS2FIX_3.webp"],loadUrl:null,vidUrl:null,vidThumb:null,webUrl:null,accessories:null},
-  {name:"Press2fix Hook Magnet",colorLabels:["pink"],tag:"",cat:"No-Tools-Just-Hand for DIY",type:"",mats:[],ETA:0,life:0,fire:0,seis:0,fR:"",lY:"",wk:"",cu:"",features:["No large holes through nails, plugs or screws in the wall. Simply press firmly. Attach picture. Done! And all this without tools.","Applicable in many substrates. Soft substrates such as wood, plaster and gypsum plasterboard are recommended.","Reusable: Remove the picture, pull the magnetic claw out of the wall and press it down again in another place. The solution if you want it to be quick and easy."],imgs:["https://raw.githubusercontent.com/fischerSoutheastAsia/easyguide-preview/main/image/PROD_NTJH/IMG_PROD_Press2fix_Magnet_1.webp","https://raw.githubusercontent.com/fischerSoutheastAsia/easyguide-preview/main/image/PROD_NTJH/IMG_PROD_Press2fix_Magnet_2.webp","https://raw.githubusercontent.com/fischerSoutheastAsia/easyguide-preview/main/image/PROD_NTJH/IMG_PROD_Press2fix_Magnet_3.webp"],loadUrl:null,vidUrl:null,vidThumb:null,webUrl:null,accessories:null},
-  {name:"DoubleBond Universal",colorLabels:["pink"],tag:"",cat:"No-Tools-Just-Hand for DIY",type:"",mats:[],ETA:0,life:0,fire:0,seis:0,fR:"",lY:"",wk:"",cu:"",features:["Weatherproof because of UV and water resistance. This ensures stable adhesion indoors and outdoors.","In order to be able to work quickly and efficiently, the assembly tape is easy to remove and can be torn off quickly.","The installation tape is transparent for unobtrusive installation. The installation is practically unobtrusive."],imgs:["https://raw.githubusercontent.com/fischerSoutheastAsia/easyguide-preview/main/image/PROD_NTJH/IMG_PROD_DOUBLEBOND_UNIVERSAL_1.webp","https://raw.githubusercontent.com/fischerSoutheastAsia/easyguide-preview/main/image/PROD_NTJH/IMG_PROD_DOUBLEBOND_UNIVERSAL_2.webp","https://raw.githubusercontent.com/fischerSoutheastAsia/easyguide-preview/main/image/PROD_NTJH/IMG_PROD_DOUBLEBOND_UNIVERSAL_3.webp"],loadUrl:null,vidUrl:null,vidThumb:null,webUrl:null,accessories:null},
-  {name:"Double-Bond Strips",colorLabels:["pink"],tag:"",cat:"No-Tools-Just-Hand for DIY",type:"",mats:[],ETA:0,life:0,fire:0,seis:0,fR:"",lY:"",wk:"",cu:"",features:["Due to the special elasticity of the material, the stripes can be easily removed even from wallpaper without leaving any residue.","The MOUNTING STRIPS stick on smooth, as well as on rough underground. This makes them perfect for flexible and short-term use.","Very strong hold, but still detachable from the surface."],imgs:["https://raw.githubusercontent.com/fischerSoutheastAsia/easyguide-preview/main/image/PROD_NTJH/IMG_PROD_DOUBLEBOND_STRIPS_1.webp","https://raw.githubusercontent.com/fischerSoutheastAsia/easyguide-preview/main/image/PROD_NTJH/IMG_PROD_DOUBLEBOND_STRIPS_2.webp","https://raw.githubusercontent.com/fischerSoutheastAsia/easyguide-preview/main/image/PROD_NTJH/IMG_PROD_DOUBLEBOND_STRIPS_3.webp","https://raw.githubusercontent.com/fischerSoutheastAsia/easyguide-preview/main/image/PROD_NTJH/IMG_PROD_DOUBLEBOND_STRIPS_4.webp"],loadUrl:null,vidUrl:null,vidThumb:null,webUrl:null,accessories:null},
+  {name:"WallHero Filler",colorLabels:["pink"],tag:"",cat:"No Tools Just Hands",type:"",mats:[],ETA:0,life:0,fire:0,seis:0,fR:"",lY:"",wk:"",cu:"",features:["The repair spatula saves the wall from ugly drill holes or cracks. The strong white of the putty makes the holes disappear and can be painted over if necessary.","Penetrates deep into narrow cracks and covers them perfectly. The filler can be applied precisely with the integrated putty knife.","The filling compound is very light and shows no shrinkage with holes up to 12 mm, which avoids ugly dents in the wall."],imgs:["https://raw.githubusercontent.com/fischerSoutheastAsia/easyguide-preview/main/image/PROD_NTJH/IMG_PROD_WALLHIROFILLER_1.webp","https://raw.githubusercontent.com/fischerSoutheastAsia/easyguide-preview/main/image/PROD_NTJH/IMG_PROD_WALLHIROFILLER_2.webp","https://raw.githubusercontent.com/fischerSoutheastAsia/easyguide-preview/main/image/PROD_NTJH/IMG_PROD_WALLHIROFILLER_3.webp","https://raw.githubusercontent.com/fischerSoutheastAsia/easyguide-preview/main/image/PROD_NTJH/IMG_PROD_WALLHIROFILLER_4.webp"],loadUrl:null,vidUrl:"https://www.youtube.com/watch?v=-CwqVdUsLrs",vidThumb:null,webUrl:null,accessories:null},
+  {name:"30 seconds glue",colorLabels:["pink"],tag:"",cat:"No Tools Just Hands",type:"",mats:[],ETA:0,life:0,fire:0,seis:0,fR:"",lY:"",wk:"",cu:"",features:["Bonds almost all materials, is fast and does not take longer than 30 seconds to hold (not suitable for PE, PP, PTFE).","Due to the slower reaction time, you don't stick your fingers directly to each other if you miss a drop.","Extra strong adhesion, up to 130 kg/cm² (Determined by internal testing). Max. Adhesion under ideal conditions steel on steel is achieved after 24 hours)."],imgs:["https://raw.githubusercontent.com/fischerSoutheastAsia/easyguide-preview/main/image/PROD_NTJH/IMG_PROD_30SECGLUE_1.webp","https://raw.githubusercontent.com/fischerSoutheastAsia/easyguide-preview/main/image/PROD_NTJH/IMG_PROD_30SECGLUE_2.webp","https://raw.githubusercontent.com/fischerSoutheastAsia/easyguide-preview/main/image/PROD_NTJH/IMG_PROD_30SECGLUE_3.webp","https://raw.githubusercontent.com/fischerSoutheastAsia/easyguide-preview/main/image/PROD_NTJH/IMG_PROD_30SECGLUE_4.webp"],loadUrl:null,vidUrl:"https://www.youtube.com/watch?v=i0vp8lmKKzM",vidThumb:null,webUrl:null,accessories:null},
+  {name:"2K PowerMix Universal",colorLabels:["pink"],tag:"",cat:"No Tools Just Hands",type:"",mats:[],ETA:0,life:0,fire:0,seis:0,fR:"",lY:"",wk:"",cu:"",features:["For an inconspicuous repair the power adhesive is transparent. This also makes it suitable for gluing glass surfaces.","Universally applicable in many areas of application. Fast hardening time and extremely strong hold.","Weatherproof because of UV and water resistance. This ensures stable adhesion indoors and outdoors."],imgs:["https://raw.githubusercontent.com/fischerSoutheastAsia/easyguide-preview/main/image/PROD_NTJH/IMG_PROD_2KPOWERMIX_1.webp","https://raw.githubusercontent.com/fischerSoutheastAsia/easyguide-preview/main/image/PROD_NTJH/IMG_PROD_2KPOWERMIX_2.webp","https://raw.githubusercontent.com/fischerSoutheastAsia/easyguide-preview/main/image/PROD_NTJH/IMG_PROD_2KPOWERMIX_3.webp","https://raw.githubusercontent.com/fischerSoutheastAsia/easyguide-preview/main/image/PROD_NTJH/IMG_PROD_2KPOWERMIX_4.webp"],loadUrl:null,vidUrl:"https://www.youtube.com/watch?v=kgd2hsJP2AE",vidThumb:null,webUrl:null,accessories:null},
+  {name:"Fix4Panel",colorLabels:["pink"],tag:"",cat:"No Tools Just Hands",type:"",mats:[],ETA:0,life:0,fire:0,seis:0,fR:"",lY:"",wk:"",cu:"",features:["High initial adhesion & flexibility","High resilience","Universally applicable to a wide range of surfaces","Elastic & vibration damping","Sufficient for an area of 1 - 2 m²"],imgs:["https://raw.githubusercontent.com/fischerSoutheastAsia/easyguide-preview/main/image/PROD_NTJH/IMG_PROD_FIX4PANEL_1.webp","https://raw.githubusercontent.com/fischerSoutheastAsia/easyguide-preview/main/image/PROD_NTJH/IMG_PROD_FIX4PANEL_2.webp"],loadUrl:null,vidUrl:null,vidThumb:null,webUrl:null,accessories:null},
+  {name:"Press2fix Hook",colorLabels:["pink"],tag:"",cat:"No Tools Just Hands",type:"",mats:[],ETA:0,life:0,fire:0,seis:0,fR:"",lY:"",wk:"",cu:"",features:["No large holes through nails, plugs or screws in the wall. Simply press firmly. Attach picture. Done! And all this without tools.","Applicable in many substrates. Soft substrates such as wood, plaster and plaster are recommended.","Reusable: Remove the picture, pull the picture claw out of the wall and press it down again in another place. The solution if you want it to be quick and easy."],imgs:["https://raw.githubusercontent.com/fischerSoutheastAsia/easyguide-preview/main/image/PROD_NTJH/IMG_PROD_PRESS2FIX_1.webp","https://raw.githubusercontent.com/fischerSoutheastAsia/easyguide-preview/main/image/PROD_NTJH/IMG_PROD_PRESS2FIX_2.webp","https://raw.githubusercontent.com/fischerSoutheastAsia/easyguide-preview/main/image/PROD_NTJH/IMG_PROD_PRESS2FIX_3.webp"],loadUrl:null,vidUrl:null,vidThumb:null,webUrl:null,accessories:null},
+  {name:"Press2fix Hook Magnet",colorLabels:["pink"],tag:"",cat:"No Tools Just Hands",type:"",mats:[],ETA:0,life:0,fire:0,seis:0,fR:"",lY:"",wk:"",cu:"",features:["No large holes through nails, plugs or screws in the wall. Simply press firmly. Attach picture. Done! And all this without tools.","Applicable in many substrates. Soft substrates such as wood, plaster and gypsum plasterboard are recommended.","Reusable: Remove the picture, pull the magnetic claw out of the wall and press it down again in another place. The solution if you want it to be quick and easy."],imgs:["https://raw.githubusercontent.com/fischerSoutheastAsia/easyguide-preview/main/image/PROD_NTJH/IMG_PROD_Press2fix_Magnet_1.webp","https://raw.githubusercontent.com/fischerSoutheastAsia/easyguide-preview/main/image/PROD_NTJH/IMG_PROD_Press2fix_Magnet_2.webp","https://raw.githubusercontent.com/fischerSoutheastAsia/easyguide-preview/main/image/PROD_NTJH/IMG_PROD_Press2fix_Magnet_3.webp"],loadUrl:null,vidUrl:null,vidThumb:null,webUrl:null,accessories:null},
+  {name:"DoubleBond Universal",colorLabels:["pink"],tag:"",cat:"No Tools Just Hands",type:"",mats:[],ETA:0,life:0,fire:0,seis:0,fR:"",lY:"",wk:"",cu:"",features:["Weatherproof because of UV and water resistance. This ensures stable adhesion indoors and outdoors.","In order to be able to work quickly and efficiently, the assembly tape is easy to remove and can be torn off quickly.","The installation tape is transparent for unobtrusive installation. The installation is practically unobtrusive."],imgs:["https://raw.githubusercontent.com/fischerSoutheastAsia/easyguide-preview/main/image/PROD_NTJH/IMG_PROD_DOUBLEBOND_UNIVERSAL_1.webp","https://raw.githubusercontent.com/fischerSoutheastAsia/easyguide-preview/main/image/PROD_NTJH/IMG_PROD_DOUBLEBOND_UNIVERSAL_2.webp","https://raw.githubusercontent.com/fischerSoutheastAsia/easyguide-preview/main/image/PROD_NTJH/IMG_PROD_DOUBLEBOND_UNIVERSAL_3.webp"],loadUrl:null,vidUrl:null,vidThumb:null,webUrl:null,accessories:null},
+  {name:"Double-Bond Strips",colorLabels:["pink"],tag:"",cat:"No Tools Just Hands",type:"",mats:[],ETA:0,life:0,fire:0,seis:0,fR:"",lY:"",wk:"",cu:"",features:["Due to the special elasticity of the material, the stripes can be easily removed even from wallpaper without leaving any residue.","The MOUNTING STRIPS stick on smooth, as well as on rough underground. This makes them perfect for flexible and short-term use.","Very strong hold, but still detachable from the surface."],imgs:["https://raw.githubusercontent.com/fischerSoutheastAsia/easyguide-preview/main/image/PROD_NTJH/IMG_PROD_DOUBLEBOND_STRIPS_1.webp","https://raw.githubusercontent.com/fischerSoutheastAsia/easyguide-preview/main/image/PROD_NTJH/IMG_PROD_DOUBLEBOND_STRIPS_2.webp","https://raw.githubusercontent.com/fischerSoutheastAsia/easyguide-preview/main/image/PROD_NTJH/IMG_PROD_DOUBLEBOND_STRIPS_3.webp","https://raw.githubusercontent.com/fischerSoutheastAsia/easyguide-preview/main/image/PROD_NTJH/IMG_PROD_DOUBLEBOND_STRIPS_4.webp"],loadUrl:null,vidUrl:null,vidThumb:null,webUrl:null,accessories:null},
   {name:"Zinc spray FTC-ZA 400 ml",hidden:true,colorLabels:["grey"],tag:"",cat:"Others",type:"",mats:[],ETA:0,life:0,fire:0,seis:0,fR:"",lY:"",wk:"",cu:"",features:["400 ml","Silver-grey colour fits perfectly with hot galvanised surfaces (similar to RAL 9006).","Can be painted over.","Heat-resistant corrosion protection until +200 °C (briefly until +300 °C).","Quick drying.","High rub resistance."],imgs:["https://raw.githubusercontent.com/fischerSoutheastAsia/easyguide-preview/main/image/PROD_Other/IMG_PROD_ZINCSPRAY_1.webp","https://raw.githubusercontent.com/fischerSoutheastAsia/easyguide-preview/main/image/PROD_Other/IMG_PROD_ZINCSPRAY_2.webp","https://raw.githubusercontent.com/fischerSoutheastAsia/easyguide-preview/main/image/PROD_Other/IMG_PROD_ZINCSPRAY_3.webp"],loadUrl:null,vidUrl:null,vidThumb:null,webUrl:null,accessories:null},
   {name:"FIS DMS Pro",colorLabels:["grey"],tag:"",cat:"Chemical fixing",type:"Dispensor",isAccessory:true,mats:[],ETA:0,life:0,fire:0,seis:0,fR:"",lY:"",wk:"",cu:"",features:["Dispensor","Adapted for cartridges with 150 ml, 300 ml, 360 ml and 390 ml content"],imgs:["https://raw.githubusercontent.com/fischerSoutheastAsia/easyguide-preview/main/image/PROD_CHEMICAL_ACCESORY/IMG_PROD_FIS_DMS_1.webp","https://raw.githubusercontent.com/fischerSoutheastAsia/easyguide-preview/main/image/PROD_CHEMICAL_ACCESORY/IMG_PROD_FIS_DMS_2.webp"],loadUrl:null,vidUrl:null,vidThumb:null,webUrl:"https://www.fischer-international.com/en/products/chemical-fixings/accessories/dispenser/dispenser-manual/dispenser-fis-dm-s-pro",accessories:null},
   {name:"FIS AM",colorLabels:["grey"],tag:"",cat:"Chemical fixing",type:"Dispensor",isAccessory:true,mats:[],ETA:0,life:0,fire:0,seis:0,fR:"",lY:"",wk:"",cu:"",features:["Dispensor","Adapted for cartridges with 150 ml, 300 ml, 360 ml and 390 ml content"],imgs:["https://raw.githubusercontent.com/fischerSoutheastAsia/easyguide-preview/main/image/PROD_CHEMICAL_ACCESORY/IMG_PROD_FIS_AM_1.webp"],loadUrl:null,vidUrl:null,vidThumb:null,webUrl:"https://www.fischer.sg/en-sg/products/chemical-fixings/accessories/dispenser/dispenser-manual/dispenser-fis-am",accessories:null},
@@ -992,244 +987,13 @@ const HDR_CFG={
   fortune:{title:'hdrFortune',back:false,logo:false}
 };
 
-// ── Colorcode Instruction Info – Carousel Modal ──
-(function(){
-  // ── COLORCODE images: hardcoded in order RED, GREEN, YELLOW, BLUE, GRAY, ORANGE, PINK ──
-  const BASE_URL = 'https://raw.githubusercontent.com/fischerSoutheastAsia/easyguide-preview/main/image/COLORCODE/';
-  const COLORCODE_IMAGES = [
-    { file: 'RED_FRONTPAGE.png',  label: 'RED'    },
-    { file: 'GREEN_ALL.png',      label: 'GREEN'  },
-    { file: 'YELLOW_MASONRY.png', label: 'YELLOW' },
-    { file: 'BLUE_CAVITY.png',    label: 'BLUE'   },
-    { file: 'GREY_CONCRETE.png',  label: 'GRAY'   },
-    { file: 'ORANGE_M%26E.png',   label: 'ORANGE' },
-    { file: 'PINK_NTJH.png',      label: 'PINK'   },
-  ];
-
-  let _ccIdx = 0;
-  let _ccTouch = {x:0, active:false};
-
-  function loadColorcodeImages(){
-    return Promise.resolve(COLORCODE_IMAGES.map(function(item){
-      return BASE_URL + item.file;
-    }));
-  }
-
-  function buildModal(imgs){
-    var existing = document.getElementById('cc-modal');
-    if(existing) existing.remove();
-
-    _ccIdx = 0;
-    var total = imgs.length;
-    var _animating = false;
-
-    // ── Modal overlay ──
-    var modal = document.createElement('div');
-    modal.id = 'cc-modal';
-    modal.style.cssText = 'position:absolute;top:0;left:0;right:0;bottom:0;z-index:500;display:flex;align-items:center;justify-content:center;background:rgba(0,0,0,0.62);backdrop-filter:blur(2px);-webkit-backdrop-filter:blur(2px);';
-    modal.addEventListener('click', function(e){ if(e.target===modal) closeModal(); });
-
-    // ── Dimensions ──
-    var CLOSE_GAP = 10; // gap between close button and card top
-    var CLOSE_H = 28;
-    var CARD_W = 304;
-    var CARD_H = 456;
-
-    // ── Outer wrapper: [prevArrow] [cardWrap] [nextArrow] ──
-    var outerRow = document.createElement('div');
-    outerRow.style.cssText = 'display:flex;flex-direction:row;align-items:center;gap:8px;';
-
-    // cardWrap: padding-top creates gap between × button and card
-    var cardWrap = document.createElement('div');
-    cardWrap.style.cssText = 'position:relative;flex-shrink:0;padding-top:'+(CLOSE_H+CLOSE_GAP)+'px;';
-
-    // ── Close button – above card right edge with a gap ──
-    var closeBtn = document.createElement('button');
-    closeBtn.innerHTML = '<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.5" stroke-linecap="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>';
-    closeBtn.style.cssText = 'position:absolute;top:0;right:0;z-index:20;background:rgba(0,0,0,0.55);border:none;cursor:pointer;border-radius:50%;width:'+CLOSE_H+'px;height:'+CLOSE_H+'px;display:flex;align-items:center;justify-content:center;padding:0;';
-    closeBtn.addEventListener('click', function(e){ e.stopPropagation(); closeModal(); });
-
-    var card = document.createElement('div');
-    // border-radius:0 = 90° sharp corners
-    card.style.cssText = 'position:relative;width:'+CARD_W+'px;background:#fff;border-radius:0;overflow:hidden;box-shadow:0 8px 32px rgba(0,0,0,0.4);display:flex;flex-direction:column;flex-shrink:0;';
-
-    // ── Slide track – infinite loop using cloned bookend slides ──
-    // Layout: [clone_last] [img0] [img1] ... [imgN-1] [clone_first]
-    var viewport = document.createElement('div');
-    viewport.style.cssText = 'width:'+CARD_W+'px;height:'+CARD_H+'px;overflow:hidden;position:relative;flex-shrink:0;';
-
-    var loopTotal = total + 2; // bookends
-    var track = document.createElement('div');
-    // translate3d instead of translateX — forces GPU compositing on a dedicated layer,
-    // which prevents the subpixel bleed that translateX causes on non-1x DPI screens
-    track.style.cssText = 'position:absolute;top:0;left:0;display:flex;flex-direction:row;width:'+(CARD_W*loopTotal)+'px;height:'+CARD_H+'px;transform:translate3d(-'+CARD_W+'px,0,0);transition:transform 0.32s cubic-bezier(0.4,0,0.2,1);';
-
-    function makeSlide(src){
-      var slide = document.createElement('div');
-      slide.style.cssText = 'width:'+CARD_W+'px;height:'+CARD_H+'px;flex-shrink:0;position:relative;overflow:hidden;';
-      var img = document.createElement('img');
-      // Integer px dimensions — avoids any fractional sizing from percentage calc
-      img.style.cssText = 'position:absolute;top:0;left:0;width:'+CARD_W+'px;height:'+CARD_H+'px;display:block;border:0;padding:0;margin:0;';
-      img.src = src;
-      img.onerror = function(){ this.src='data:image/svg+xml,'+encodeURIComponent('<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="1620"><rect width="1080" height="1620" fill="#E4E3DF"/></svg>'); };
-      slide.appendChild(img);
-      return slide;
-    }
-
-    // clone_last (bookend before)
-    track.appendChild(makeSlide(imgs[total-1]));
-    // real slides
-    for(var s=0; s<total; s++) track.appendChild(makeSlide(imgs[s]));
-    // clone_first (bookend after)
-    track.appendChild(makeSlide(imgs[0]));
-    viewport.appendChild(track);
-
-    var _transitioning = false;
-    function goTo(i, skipAnim){
-      i = ((i % total) + total) % total;
-      _ccIdx = i;
-      var trackPos = i + 1;
-      track.style.transition = skipAnim ? 'none' : 'transform 0.32s cubic-bezier(0.4,0,0.2,1)';
-      track.style.transform = 'translate3d(-'+(CARD_W*trackPos)+'px,0,0)';
-      updateDots();
-    }
-
-    track.addEventListener('transitionend', function(e){
-      if(e.propertyName !== 'transform') return;
-      var match = track.style.transform.match(/translate3d\(\s*(-?[\d.]+)px/);
-      if(!match) return;
-      var curPos = Math.round(-parseFloat(match[1]) / CARD_W);
-      if(curPos === 0){
-        track.style.transition = 'none';
-        track.style.transform = 'translate3d(-'+(CARD_W*total)+'px,0,0)';
-      } else if(curPos === loopTotal-1){
-        track.style.transition = 'none';
-        track.style.transform = 'translate3d(-'+CARD_W+'px,0,0)';
-      }
-    });
-
-    // ── Prev / Next arrows – outside card, no background circle ──
-    function arrowBtn(dir){
-      var b = document.createElement('button');
-      b.style.cssText = 'background:none;border:none;cursor:pointer;padding:6px;flex-shrink:0;display:flex;align-items:center;justify-content:center;';
-      b.innerHTML = dir==='prev'
-        ? '<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,0.9)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M15 18l-6-6 6-6"/></svg>'
-        : '<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,0.9)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18l6-6-6-6"/></svg>';
-      b.addEventListener('click', function(e){ e.stopPropagation(); goTo(dir==='prev'?_ccIdx-1:_ccIdx+1); });
-      return b;
-    }
-    var prevBtn = arrowBtn('prev');
-    var nextBtn = arrowBtn('next');
-
-    // ── Touch swipe ──
-    viewport.addEventListener('touchstart', function(e){
-      _ccTouch.x = e.touches[0].clientX;
-      _ccTouch.active = true;
-    }, {passive:true});
-    viewport.addEventListener('touchend', function(e){
-      if(!_ccTouch.active) return;
-      var dx = _ccTouch.x - e.changedTouches[0].clientX;
-      _ccTouch.active = false;
-      if(Math.abs(dx)>40) goTo(dx>0?_ccIdx+1:_ccIdx-1);
-    }, {passive:true});
-
-    // ── Dots – more vertical padding ──
-    var dotsRow = document.createElement('div');
-    dotsRow.style.cssText = 'display:flex;justify-content:center;align-items:center;gap:8px;padding:16px 8px 14px;background:#fff;flex-shrink:0;';
-    var dotEls = [];
-    for(var d=0; d<total; d++){
-      var dot = document.createElement('div');
-      dot.style.cssText = 'width:7px;height:7px;border-radius:50%;background:rgba(0,0,0,0.18);transition:background 0.2s;flex-shrink:0;cursor:pointer;';
-      (function(idx){ dot.addEventListener('click', function(e){ e.stopPropagation(); goTo(idx); }); })(d);
-      dotEls.push(dot);
-      dotsRow.appendChild(dot);
-    }
-
-    function updateDots(){
-      dotEls.forEach(function(d,i){ d.style.background = i===_ccIdx?'#FF0000':'rgba(0,0,0,0.18)'; });
-    }
-    updateDots();
-
-    // ── Assemble ──
-    card.appendChild(viewport);
-    card.appendChild(dotsRow);
-    cardWrap.appendChild(closeBtn);
-    cardWrap.appendChild(card);
-    outerRow.appendChild(prevBtn);
-    outerRow.appendChild(cardWrap);
-    outerRow.appendChild(nextBtn);
-    modal.appendChild(outerRow);
-    return modal;
-  }
-
-  function closeModal(){
-    const m = document.getElementById('cc-modal');
-    if(m){ m.style.opacity='0'; m.style.transition='opacity 0.18s'; setTimeout(()=>m.remove(), 200); }
-  }
-
-  window.showColorCodeInfo = function(){
-    // Stop heartbeat and restore normal color on first click
-    window._infoClicked = true;
-    _stopInfoHeartbeat();
-    const img=document.getElementById('hdr-info-img');
-    if(img) img.style.filter='none';
-
-    const app = document.getElementById('APP');
-    if(!app) return;
-
-    loadColorcodeImages().then(function(imgs){
-      const existing = document.getElementById('cc-modal');
-      if(existing) existing.remove();
-
-      const modal = buildModal(imgs);
-      modal.style.opacity = '0';
-      modal.style.transition = 'opacity 0.2s';
-      app.appendChild(modal);
-      requestAnimationFrame(function(){ modal.style.opacity='1'; });
-    });
-  };
-})();
-
-let _infoHeartbeatTimer=null;
-function _startInfoHeartbeat(){
-  _stopInfoHeartbeat();
-  const _beat=()=>{
-    const btn=document.getElementById('hdr-info-btn');
-    if(!btn||btn.style.display==='none') return;
-    const img=btn.querySelector('img');
-    if(img){
-      img.classList.remove('info-heartbeat');
-      void img.offsetWidth;
-      img.classList.add('info-heartbeat');
-      setTimeout(()=>img.classList.remove('info-heartbeat'),700);
-    }
-  };
-  _beat(); // fire immediately on show
-  _infoHeartbeatTimer=setInterval(_beat,5000);
-}
-function _stopInfoHeartbeat(){
-  if(_infoHeartbeatTimer){clearInterval(_infoHeartbeatTimer);_infoHeartbeatTimer=null;}
-  const btn=document.getElementById('hdr-info-btn');
-  if(btn){const img=btn.querySelector('img');if(img)img.classList.remove('info-heartbeat');}
-}
 
 function updateHdr(id,customTitle){
   const cfg=HDR_CFG[id];
   const backBtn=$('hdr-back'),logo=$('hdr-logo'),titleEl=$('hdr-title'),lpBtn=$('lp');
-  const infoBtn=$('hdr-info-btn');
   if(!cfg){backBtn.style.display='none';logo.style.display='flex';titleEl.style.display='none';return;}
   backBtn.style.display=cfg.back?'flex':'none';
   lpBtn.style.visibility=(id==='lang')?'hidden':'visible';
-  // Show Info button only on product list panel
-  if(infoBtn){
-    const show=(id==='pl');
-    infoBtn.style.display=show?'flex':'none';
-    if(show){
-      if(!window._infoClicked) _startInfoHeartbeat();
-    } else {
-      _stopInfoHeartbeat();
-    }
-  }
   if(cfg.logo){logo.style.display='flex';titleEl.style.display='none';}
   else{logo.style.display='none';titleEl.style.display='block';
     if(cfg.det){titleEl.textContent='';}
@@ -1524,22 +1288,6 @@ function removeCmp(name){CMP.delete(name);updCmpBadge();rCmp();// sync list butt
   document.querySelectorAll('[data-cmp-name]').forEach(btn=>{if(btn.dataset.cmpName===name)btn.innerHTML=scaleIcon(false,true);});}
 function clearCmp(){CMP.clear();updCmpBadge();rCmp();document.querySelectorAll('[data-cmp-name]').forEach(btn=>{btn.innerHTML=scaleIcon(false,true);});}
 
-// ── Color guide label definitions ──
-const COLOR_LABELS={
-  green: {hex:'#009C41', label:'Any base material'},
-  yellow:{hex:'#FFDD00', label:'Solid material'},
-  blue:  {hex:'#004579', label:'Cavity'},
-  grey:  {hex:'#524C47', label:'Concrete'},
-  orange:{hex:'#F38120', label:'M&E'},
-  pink:  {hex:'#E59F9F', label:'No tools just hands'},
-  na:    {hex:'#ffffff', label:''},
-};
-const ALL_COLOR_KEYS=Object.keys(COLOR_LABELS);
-
-function buildColorBar(keys){
-  if(!keys||!keys.length) return '';
-  return `<div style="display:flex;flex-direction:column;width:6px;min-width:6px;align-self:stretch;overflow:hidden;">${keys.map(k=>COLOR_LABELS[k]?`<div style="flex:1;background:${COLOR_LABELS[k].hex};"></div>`:'').join('')}</div>`;
-}
 
 function rPL(list,title){
   const area=$('pl-c');area.innerHTML='';const T=t();
@@ -1555,8 +1303,7 @@ function rPL(list,title){
     row.style.cssText='background:#fff;border-bottom:1px solid #E4E3DF;display:flex;align-items:stretch;min-height:64px;width:100%;cursor:pointer;';
     row.onclick=()=>sD(p.name);
     const iconSrc0=getProductIcon(p.name)||p.imgs[0];
-    const colorKeys=p.colorLabels||ALL_COLOR_KEYS;
-    row.innerHTML=`${buildColorBar(colorKeys)}<div style="width:56px;height:56px;flex-shrink:0;overflow:hidden;align-self:center;"><img src="${iconSrc0}" style="width:56px;height:56px;object-fit:cover;display:block;" onerror="this.style.display='none'"></div><div style="flex:1;padding:12px 0 12px 14px;align-self:center;"><div style="display:flex;align-items:center;gap:6px;flex-wrap:wrap;"><span style="font-size:15px;font-weight:700;color:#1a1a1a;">${p.name}</span>${mTag(p.tag)}</div></div><div style="display:flex;align-items:center;flex-shrink:0;padding-right:14px;">${chevronRight}</div>`;
+    row.innerHTML=`<div style="width:56px;height:56px;flex-shrink:0;overflow:hidden;align-self:center;"><img src="${iconSrc0}" style="width:56px;height:56px;object-fit:cover;display:block;" onerror="this.style.display='none'"></div><div style="flex:1;padding:12px 0 12px 14px;align-self:center;"><div style="display:flex;align-items:center;gap:6px;flex-wrap:wrap;"><span style="font-size:15px;font-weight:700;color:#1a1a1a;">${p.name}</span>${mTag(p.tag)}</div></div><div style="display:flex;align-items:center;flex-shrink:0;padding-right:14px;">${chevronRight}</div>`;
     area.appendChild(row);
   });
 
@@ -1567,8 +1314,7 @@ function rPL(list,title){
       row.style.cssText='background:#fff;border-bottom:1px solid #E4E3DF;display:flex;align-items:stretch;min-height:56px;width:100%;cursor:pointer;';
       row.onclick=()=>sD(p.name);
       const iconSrcAcc=getProductIcon(p.name)||p.imgs[0];
-      const colorKeys=p.colorLabels||ALL_COLOR_KEYS;
-      row.innerHTML=`${buildColorBar(colorKeys)}<div style="width:56px;height:56px;flex-shrink:0;overflow:hidden;align-self:center;"><img src="${iconSrcAcc}" style="width:56px;height:56px;object-fit:cover;display:block;" onerror="this.style.display='none'"></div><div style="flex:1;padding:10px 0 10px 14px;align-self:center;"><div style="font-size:14px;font-weight:600;color:#1a1a1a;">${p.name}</div></div><div style="display:flex;align-items:center;flex-shrink:0;padding-right:14px;">${chevronRight}</div>`;
+      row.innerHTML=`<div style="width:56px;height:56px;flex-shrink:0;overflow:hidden;align-self:center;"><img src="${iconSrcAcc}" style="width:56px;height:56px;object-fit:cover;display:block;" onerror="this.style.display='none'"></div><div style="flex:1;padding:10px 0 10px 14px;align-self:center;"><div style="font-size:14px;font-weight:600;color:#1a1a1a;">${p.name}</div></div><div style="display:flex;align-items:center;flex-shrink:0;padding-right:14px;">${chevronRight}</div>`;
       area.appendChild(row);
     });
   }
